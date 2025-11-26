@@ -47,6 +47,11 @@ def plot_candles(
 
     save_path : str or None
         If provided, saves the figure to this path.
+
+    Assists in visualizing detected Double Top patterns on candlestick charts.
+    
+    Function originally by ChatGPT, modified by me to make sure that DTs were being detected correctly.
+    I have little experience with mplfinance, so I relied heavily on ChatGPT to generate this code.
     """
     
     dt_events = pos_to_date(df, dt_events)
