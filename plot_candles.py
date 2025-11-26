@@ -48,10 +48,9 @@ def plot_candles(
     save_path : str or None
         If provided, saves the figure to this path.
     """
-    print(df.head())
-    print(dt_events.head())
+    
     dt_events = pos_to_date(df, dt_events)
-    print(dt_events.head())
+    
     # Ensure datetime types in dt_events
     for col in ["peak1_date", "peak2_date", "trough_date", "confirm_date"]:
         if col in dt_events.columns:
