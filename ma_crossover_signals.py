@@ -1,10 +1,4 @@
-import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-from scipy import stats
-import yfinance as yf
-import mplfinance as mpf
-import matplotlib.pyplot as plt
 from compute_forward_returns import compute_forward_returns
 
 def ma_crossover_signals(df, short_window=20, long_window=50, horizons=(5, 20, 60)):

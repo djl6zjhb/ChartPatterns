@@ -1,10 +1,5 @@
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-from scipy import stats
-import yfinance as yf
-import mplfinance as mpf
-import matplotlib.pyplot as plt
 from compute_forward_returns import compute_forward_returns
 
 def sample_random_events(df, n_events, horizons=(5, 20, 60), seed=42, buffer=60):

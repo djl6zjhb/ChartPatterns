@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 
 def pos_to_date(df, dt_events) -> pd.DataFrame:
     """

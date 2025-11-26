@@ -1,10 +1,6 @@
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-from scipy import stats
-import yfinance as yf
 import mplfinance as mpf
-import matplotlib.pyplot as plt
 from run_double_top_pipeline import run_double_top_pipeline
 from pos_to_date import pos_to_date
 

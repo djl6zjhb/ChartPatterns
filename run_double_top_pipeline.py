@@ -1,10 +1,4 @@
-import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-from scipy import stats
-import yfinance as yf
-import mplfinance as mpf
-import matplotlib.pyplot as plt
 import os
 from add_to_full_summary import add_to_full_summary
 from detect_double_tops import detect_double_tops

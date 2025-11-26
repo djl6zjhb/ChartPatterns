@@ -1,10 +1,4 @@
-import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-from scipy import stats
-import yfinance as yf
-import mplfinance as mpf
-import matplotlib.pyplot as plt
 
 def confirm_double_tops(df, events_df, max_confirm_days=20):
     """

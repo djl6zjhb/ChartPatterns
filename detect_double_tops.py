@@ -1,10 +1,5 @@
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-from scipy import stats
-import yfinance as yf
-import mplfinance as mpf
-import matplotlib.pyplot as plt
 from find_local_extrema import find_local_extrema
 
 def detect_double_tops(

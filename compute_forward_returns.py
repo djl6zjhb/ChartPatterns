@@ -1,11 +1,4 @@
 import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-from scipy import stats
-import yfinance as yf
-import mplfinance as mpf
-import matplotlib.pyplot as plt
-from pos_to_date import pos_to_date
 
 def compute_forward_returns(df, events_df, horizons=(5, 20, 60)):
     """
