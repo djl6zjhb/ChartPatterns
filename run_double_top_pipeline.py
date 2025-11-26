@@ -69,13 +69,6 @@ def run_double_top_pipeline(
         Plain-language summary at the 20-day horizon (if available).
     """
 
-    # 1) pull data; do in full run, not local data
-    # raw = yf.download(ticker, start=start, end=end)
-    # if raw.empty:
-    #     raise ValueError(f"No data returned for {ticker} between {start} and {end}.")
-
-    # df = raw[["Open", "High", "Low", "Close", "Volume"]].copy().sort_index()
-
     # 1) pull data from local files
     df = pd.read_csv(f"sp500/sp500/{ticker}.csv", 
                      header=0, 
