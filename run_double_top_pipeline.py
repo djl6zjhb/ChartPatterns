@@ -89,7 +89,6 @@ def run_double_top_pipeline(
 
     if dt_confirmed.empty:
         print(f"[{ticker}] No confirmed double tops found. Consider loosening parameters.")
-        # still build empty containers to keep interface consistent
         dt_events = pd.DataFrame()
         rand_events = pd.DataFrame()
         ma_events = pd.DataFrame()
@@ -103,9 +102,6 @@ def run_double_top_pipeline(
     dt_events = compute_forward_returns(df, dt_confirmed, horizons=horizons)
     dt_events["symbol"] = ticker
     dt_events["type"] = "double_top"
-
-    # print(dt_events.head())
-
 
     # 4) baselines
     rand_events = sample_random_events(df, n_events=len(dt_events), horizons=horizons)
@@ -137,6 +133,7 @@ def run_double_top_pipeline(
         try:
             text_summary = summarize_pattern_performance(summary_df, horizon=h_for_text)
             # print("\nText summary:\n")
+            # In test runs, I want to see how oftwen I can mark the double top as a success 
             if "NOT" not in text_summary:
                 print(text_summary)
         except Exception as e:
