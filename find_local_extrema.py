@@ -8,9 +8,7 @@ import matplotlib.pyplot as plt
 
 def find_local_extrema(df, window=3):
     """
-    Very simple local high/low markers using a rolling window.
-    A point is a local high if its High is the max over [t-window, t+window].
-    Similar for local low.
+    Identify local max and mins in the 'High' and 'Low' columns of df.
     """
     highs = df['High']
     lows = df['Low']
