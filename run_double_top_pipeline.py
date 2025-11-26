@@ -24,7 +24,7 @@ def run_double_top_pipeline(
     End-to-end pipeline to test Double Top performance for one ticker.
 
     Steps:
-      1. Download daily OHLCV via yfinance.
+      1. Load stock data from local CSV files.
       2. Detect Double Tops (strict two-peak pattern with trough).
       3. Confirm when price closes below the trough (neckline).
       4. Compute forward returns for double-top events (5/20/60 days by default).
