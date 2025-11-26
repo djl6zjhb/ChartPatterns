@@ -1,0 +1,2257 @@
+[
+  {
+    "type": "Head & Shoulders",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2022-01-03T00:00:00.000000000",
+    "end_date": "2022-03-29T00:00:00.000000000",
+    "duration_days": 59,
+    "left_shoulder": {
+      "date": "2022-01-03T00:00:00.000000000",
+      "price": 178.443115234375,
+      "index": 1
+    },
+    "head": {
+      "date": "2022-02-09T00:00:00.000000000",
+      "price": 173.0456085205078,
+      "index": 27
+    },
+    "right_shoulder": {
+      "date": "2022-03-29T00:00:00.000000000",
+      "price": 175.67649841308594,
+      "index": 60
+    },
+    "left_trough": {
+      "date": "2022-01-27T00:00:00.000000000",
+      "price": 156.09974670410156,
+      "index": 18
+    },
+    "right_trough": {
+      "date": "2022-03-14T00:00:00.000000000",
+      "price": 147.85643005371094,
+      "index": 49
+    },
+    "neckline_level": 151.97808837890625,
+    "validation_reasons": [
+      "Head not higher than shoulders",
+      "Head not significantly higher than shoulders",
+      "Neckline too steep: 5.3%",
+      "Pattern too short: 59 days"
+    ]
+  },
+  {
+    "type": "Head & Shoulders",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2022-02-09T00:00:00.000000000",
+    "end_date": "2022-06-02T00:00:00.000000000",
+    "duration_days": 78,
+    "left_shoulder": {
+      "date": "2022-02-09T00:00:00.000000000",
+      "price": 173.0456085205078,
+      "index": 27
+    },
+    "head": {
+      "date": "2022-03-29T00:00:00.000000000",
+      "price": 175.67649841308594,
+      "index": 60
+    },
+    "right_shoulder": {
+      "date": "2022-06-02T00:00:00.000000000",
+      "price": 148.6536865234375,
+      "index": 105
+    },
+    "left_trough": {
+      "date": "2022-03-14T00:00:00.000000000",
+      "price": 147.85643005371094,
+      "index": 49
+    },
+    "right_trough": {
+      "date": "2022-05-19T00:00:00.000000000",
+      "price": 135.02798461914062,
+      "index": 96
+    },
+    "neckline_level": 141.44220733642578,
+    "validation_reasons": [
+      "Shoulders not similar: 14.1% difference",
+      "Neckline too steep: 8.7%"
+    ]
+  },
+  {
+    "type": "Head & Shoulders",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2022-03-29T00:00:00.000000000",
+    "end_date": "2022-08-17T00:00:00.000000000",
+    "duration_days": 97,
+    "left_shoulder": {
+      "date": "2022-03-29T00:00:00.000000000",
+      "price": 175.67649841308594,
+      "index": 60
+    },
+    "head": {
+      "date": "2022-06-02T00:00:00.000000000",
+      "price": 148.6536865234375,
+      "index": 105
+    },
+    "right_shoulder": {
+      "date": "2022-08-17T00:00:00.000000000",
+      "price": 171.83746337890625,
+      "index": 157
+    },
+    "left_trough": {
+      "date": "2022-05-19T00:00:00.000000000",
+      "price": 135.02798461914062,
+      "index": 96
+    },
+    "right_trough": {
+      "date": "2022-06-16T00:00:00.000000000",
+      "price": 127.86122131347656,
+      "index": 115
+    },
+    "neckline_level": 131.4446029663086,
+    "validation_reasons": [
+      "Head not higher than shoulders",
+      "Head not significantly higher than shoulders",
+      "Neckline too steep: 5.3%"
+    ]
+  },
+  {
+    "type": "Head & Shoulders",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2022-06-02T00:00:00.000000000",
+    "end_date": "2022-10-28T00:00:00.000000000",
+    "duration_days": 103,
+    "left_shoulder": {
+      "date": "2022-06-02T00:00:00.000000000",
+      "price": 148.6536865234375,
+      "index": 105
+    },
+    "head": {
+      "date": "2022-08-17T00:00:00.000000000",
+      "price": 171.83746337890625,
+      "index": 157
+    },
+    "right_shoulder": {
+      "date": "2022-10-28T00:00:00.000000000",
+      "price": 153.3197784423828,
+      "index": 208
+    },
+    "left_trough": {
+      "date": "2022-06-16T00:00:00.000000000",
+      "price": 127.86122131347656,
+      "index": 115
+    },
+    "right_trough": {
+      "date": "2022-09-30T00:00:00.000000000",
+      "price": 136.05235290527344,
+      "index": 188
+    },
+    "neckline_level": 131.956787109375,
+    "validation_reasons": [
+      "Neckline too steep: 6.4%"
+    ]
+  },
+  {
+    "type": "Head & Shoulders",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2022-08-17T00:00:00.000000000",
+    "end_date": "2022-11-18T00:00:00.000000000",
+    "duration_days": 66,
+    "left_shoulder": {
+      "date": "2022-08-17T00:00:00.000000000",
+      "price": 171.83746337890625,
+      "index": 157
+    },
+    "head": {
+      "date": "2022-10-28T00:00:00.000000000",
+      "price": 153.3197784423828,
+      "index": 208
+    },
+    "right_shoulder": {
+      "date": "2022-11-18T00:00:00.000000000",
+      "price": 149.18600463867188,
+      "index": 223
+    },
+    "left_trough": {
+      "date": "2022-09-30T00:00:00.000000000",
+      "price": 136.05235290527344,
+      "index": 188
+    },
+    "right_trough": {
+      "date": "2022-11-09T00:00:00.000000000",
+      "price": 132.9943389892578,
+      "index": 216
+    },
+    "neckline_level": 134.52334594726562,
+    "validation_reasons": [
+      "Head not higher than shoulders",
+      "Shoulders not similar: 13.2% difference",
+      "Head not significantly higher than shoulders"
+    ]
+  },
+  {
+    "type": "Head & Shoulders",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2022-10-28T00:00:00.000000000",
+    "end_date": "2023-02-15T00:00:00.000000000",
+    "duration_days": 74,
+    "left_shoulder": {
+      "date": "2022-10-28T00:00:00.000000000",
+      "price": 153.3197784423828,
+      "index": 208
+    },
+    "head": {
+      "date": "2022-11-18T00:00:00.000000000",
+      "price": 149.18600463867188,
+      "index": 223
+    },
+    "right_shoulder": {
+      "date": "2023-02-15T00:00:00.000000000",
+      "price": 153.40365600585938,
+      "index": 282
+    },
+    "left_trough": {
+      "date": "2022-11-09T00:00:00.000000000",
+      "price": 132.9943389892578,
+      "index": 216
+    },
+    "right_trough": {
+      "date": "2023-01-05T00:00:00.000000000",
+      "price": 123.2813491821289,
+      "index": 254
+    },
+    "neckline_level": 128.13784408569336,
+    "validation_reasons": [
+      "Head not higher than shoulders",
+      "Head not significantly higher than shoulders",
+      "Neckline too steep: 7.3%"
+    ]
+  },
+  {
+    "type": "Head & Shoulders",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2022-11-18T00:00:00.000000000",
+    "end_date": "2023-07-31T00:00:00.000000000",
+    "duration_days": 172,
+    "left_shoulder": {
+      "date": "2022-11-18T00:00:00.000000000",
+      "price": 149.18600463867188,
+      "index": 223
+    },
+    "head": {
+      "date": "2023-02-15T00:00:00.000000000",
+      "price": 153.40365600585938,
+      "index": 282
+    },
+    "right_shoulder": {
+      "date": "2023-07-31T00:00:00.000000000",
+      "price": 194.28208923339844,
+      "index": 395
+    },
+    "left_trough": {
+      "date": "2023-01-05T00:00:00.000000000",
+      "price": 123.2813491821289,
+      "index": 254
+    },
+    "right_trough": {
+      "date": "2023-03-01T00:00:00.000000000",
+      "price": 143.5079345703125,
+      "index": 291
+    },
+    "neckline_level": 133.3946418762207,
+    "validation_reasons": [
+      "Head not higher than shoulders",
+      "Shoulders not similar: 23.2% difference",
+      "Head not significantly higher than shoulders",
+      "Neckline too steep: 16.4%"
+    ]
+  },
+  {
+    "type": "Head & Shoulders",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2023-02-15T00:00:00.000000000",
+    "end_date": "2023-09-05T00:00:00.000000000",
+    "duration_days": 138,
+    "left_shoulder": {
+      "date": "2023-02-15T00:00:00.000000000",
+      "price": 153.40365600585938,
+      "index": 282
+    },
+    "head": {
+      "date": "2023-07-31T00:00:00.000000000",
+      "price": 194.28208923339844,
+      "index": 395
+    },
+    "right_shoulder": {
+      "date": "2023-09-05T00:00:00.000000000",
+      "price": 187.8599395751953,
+      "index": 420
+    },
+    "left_trough": {
+      "date": "2023-03-01T00:00:00.000000000",
+      "price": 143.5079345703125,
+      "index": 291
+    },
+    "right_trough": {
+      "date": "2023-08-17T00:00:00.000000000",
+      "price": 172.3122100830078,
+      "index": 408
+    },
+    "neckline_level": 157.91007232666016,
+    "validation_reasons": [
+      "Shoulders not similar: 18.3% difference",
+      "Neckline too steep: 20.1%"
+    ]
+  },
+  {
+    "type": "Head & Shoulders",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2023-07-31T00:00:00.000000000",
+    "end_date": "2023-10-12T00:00:00.000000000",
+    "duration_days": 52,
+    "left_shoulder": {
+      "date": "2023-07-31T00:00:00.000000000",
+      "price": 194.28208923339844,
+      "index": 395
+    },
+    "head": {
+      "date": "2023-09-05T00:00:00.000000000",
+      "price": 187.8599395751953,
+      "index": 420
+    },
+    "right_shoulder": {
+      "date": "2023-10-12T00:00:00.000000000",
+      "price": 178.95713806152344,
+      "index": 447
+    },
+    "left_trough": {
+      "date": "2023-08-17T00:00:00.000000000",
+      "price": 172.3122100830078,
+      "index": 408
+    },
+    "right_trough": {
+      "date": "2023-09-27T00:00:00.000000000",
+      "price": 168.77684020996094,
+      "index": 436
+    },
+    "neckline_level": 170.54452514648438,
+    "validation_reasons": [
+      "Head not higher than shoulders",
+      "Shoulders not similar: 7.9% difference",
+      "Head not significantly higher than shoulders",
+      "Pattern too short: 52 days"
+    ]
+  },
+  {
+    "type": "Head & Shoulders",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2023-09-05T00:00:00.000000000",
+    "end_date": "2023-12-14T00:00:00.000000000",
+    "duration_days": 71,
+    "left_shoulder": {
+      "date": "2023-09-05T00:00:00.000000000",
+      "price": 187.8599395751953,
+      "index": 420
+    },
+    "head": {
+      "date": "2023-10-12T00:00:00.000000000",
+      "price": 178.95713806152344,
+      "index": 447
+    },
+    "right_shoulder": {
+      "date": "2023-12-14T00:00:00.000000000",
+      "price": 196.4468231201172,
+      "index": 491
+    },
+    "left_trough": {
+      "date": "2023-09-27T00:00:00.000000000",
+      "price": 168.77684020996094,
+      "index": 436
+    },
+    "right_trough": {
+      "date": "2023-10-26T00:00:00.000000000",
+      "price": 165.27117919921875,
+      "index": 457
+    },
+    "neckline_level": 167.02400970458984,
+    "validation_reasons": [
+      "Head not higher than shoulders",
+      "Head not significantly higher than shoulders"
+    ]
+  },
+  {
+    "type": "Head & Shoulders",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2023-10-12T00:00:00.000000000",
+    "end_date": "2024-01-23T00:00:00.000000000",
+    "duration_days": 69,
+    "left_shoulder": {
+      "date": "2023-10-12T00:00:00.000000000",
+      "price": 178.95713806152344,
+      "index": 447
+    },
+    "head": {
+      "date": "2023-12-14T00:00:00.000000000",
+      "price": 196.4468231201172,
+      "index": 491
+    },
+    "right_shoulder": {
+      "date": "2024-01-23T00:00:00.000000000",
+      "price": 193.54139709472656,
+      "index": 516
+    },
+    "left_trough": {
+      "date": "2023-10-26T00:00:00.000000000",
+      "price": 165.27117919921875,
+      "index": 457
+    },
+    "right_trough": {
+      "date": "2024-01-05T00:00:00.000000000",
+      "price": 179.658935546875,
+      "index": 505
+    },
+    "neckline_level": 172.46505737304688,
+    "validation_reasons": [
+      "Shoulders not similar: 7.5% difference",
+      "Neckline too steep: 8.7%"
+    ]
+  },
+  {
+    "type": "Head & Shoulders",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2023-12-14T00:00:00.000000000",
+    "end_date": "2024-03-20T00:00:00.000000000",
+    "duration_days": 65,
+    "left_shoulder": {
+      "date": "2023-12-14T00:00:00.000000000",
+      "price": 196.4468231201172,
+      "index": 491
+    },
+    "head": {
+      "date": "2024-01-23T00:00:00.000000000",
+      "price": 193.54139709472656,
+      "index": 516
+    },
+    "right_shoulder": {
+      "date": "2024-03-20T00:00:00.000000000",
+      "price": 177.39610290527344,
+      "index": 556
+    },
+    "left_trough": {
+      "date": "2024-01-05T00:00:00.000000000",
+      "price": 179.658935546875,
+      "index": 505
+    },
+    "right_trough": {
+      "date": "2024-03-07T00:00:00.000000000",
+      "price": 167.79502868652344,
+      "index": 547
+    },
+    "neckline_level": 173.72698211669922,
+    "validation_reasons": [
+      "Head not higher than shoulders",
+      "Shoulders not similar: 9.7% difference",
+      "Neckline too steep: 6.6%"
+    ]
+  },
+  {
+    "type": "Head & Shoulders",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2024-04-12T00:00:00.000000000",
+    "end_date": "2024-08-29T00:00:00.000000000",
+    "duration_days": 96,
+    "left_shoulder": {
+      "date": "2024-04-12T00:00:00.000000000",
+      "price": 175.29119873046875,
+      "index": 572
+    },
+    "head": {
+      "date": "2024-07-16T00:00:00.000000000",
+      "price": 233.4619903564453,
+      "index": 636
+    },
+    "right_shoulder": {
+      "date": "2024-08-29T00:00:00.000000000",
+      "price": 228.7255096435547,
+      "index": 668
+    },
+    "left_trough": {
+      "date": "2024-04-19T00:00:00.000000000",
+      "price": 163.8235626220703,
+      "index": 577
+    },
+    "right_trough": {
+      "date": "2024-08-06T00:00:00.000000000",
+      "price": 206.0315399169922,
+      "index": 651
+    },
+    "neckline_level": 184.92755126953125,
+    "validation_reasons": [
+      "Shoulders not similar: 23.4% difference",
+      "Neckline too steep: 25.8%"
+    ]
+  },
+  {
+    "type": "Head & Shoulders",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2024-07-16T00:00:00.000000000",
+    "end_date": "2024-09-30T00:00:00.000000000",
+    "duration_days": 53,
+    "left_shoulder": {
+      "date": "2024-07-16T00:00:00.000000000",
+      "price": 233.4619903564453,
+      "index": 636
+    },
+    "head": {
+      "date": "2024-08-29T00:00:00.000000000",
+      "price": 228.7255096435547,
+      "index": 668
+    },
+    "right_shoulder": {
+      "date": "2024-09-30T00:00:00.000000000",
+      "price": 231.920654296875,
+      "index": 689
+    },
+    "left_trough": {
+      "date": "2024-08-06T00:00:00.000000000",
+      "price": 206.0315399169922,
+      "index": 651
+    },
+    "right_trough": {
+      "date": "2024-09-16T00:00:00.000000000",
+      "price": 215.3179168701172,
+      "index": 679
+    },
+    "neckline_level": 210.6747283935547,
+    "validation_reasons": [
+      "Head not higher than shoulders",
+      "Head not significantly higher than shoulders",
+      "Pattern too short: 53 days"
+    ]
+  },
+  {
+    "type": "Head & Shoulders",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2024-08-29T00:00:00.000000000",
+    "end_date": "2024-10-21T00:00:00.000000000",
+    "duration_days": 36,
+    "left_shoulder": {
+      "date": "2024-08-29T00:00:00.000000000",
+      "price": 228.7255096435547,
+      "index": 668
+    },
+    "head": {
+      "date": "2024-09-30T00:00:00.000000000",
+      "price": 231.920654296875,
+      "index": 689
+    },
+    "right_shoulder": {
+      "date": "2024-10-21T00:00:00.000000000",
+      "price": 235.384521484375,
+      "index": 704
+    },
+    "left_trough": {
+      "date": "2024-09-16T00:00:00.000000000",
+      "price": 215.3179168701172,
+      "index": 679
+    },
+    "right_trough": {
+      "date": "2024-10-07T00:00:00.000000000",
+      "price": 220.66302490234372,
+      "index": 694
+    },
+    "neckline_level": 217.99047088623047,
+    "validation_reasons": [
+      "Head not higher than shoulders",
+      "Head not significantly higher than shoulders",
+      "Pattern too short: 36 days"
+    ]
+  },
+  {
+    "type": "Head & Shoulders",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2024-09-30T00:00:00.000000000",
+    "end_date": "2024-12-26T00:00:00.000000000",
+    "duration_days": 61,
+    "left_shoulder": {
+      "date": "2024-09-30T00:00:00.000000000",
+      "price": 231.920654296875,
+      "index": 689
+    },
+    "head": {
+      "date": "2024-10-21T00:00:00.000000000",
+      "price": 235.384521484375,
+      "index": 704
+    },
+    "right_shoulder": {
+      "date": "2024-12-26T00:00:00.000000000",
+      "price": 258.1037292480469,
+      "index": 750
+    },
+    "left_trough": {
+      "date": "2024-10-07T00:00:00.000000000",
+      "price": 220.66302490234372,
+      "index": 694
+    },
+    "right_trough": {
+      "date": "2024-11-04T00:00:00.000000000",
+      "price": 220.9815368652344,
+      "index": 714
+    },
+    "neckline_level": 220.82228088378906,
+    "validation_reasons": [
+      "Head not higher than shoulders",
+      "Shoulders not similar: 10.1% difference",
+      "Head not significantly higher than shoulders"
+    ]
+  },
+  {
+    "type": "Double Top",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2022-01-03T00:00:00.000000000",
+    "end_date": "2022-02-09T00:00:00.000000000",
+    "duration_days": 26,
+    "first_peak": {
+      "date": "2022-01-03T00:00:00.000000000",
+      "price": 178.443115234375,
+      "index": 1
+    },
+    "second_peak": {
+      "date": "2022-02-09T00:00:00.000000000",
+      "price": 173.0456085205078,
+      "index": 27
+    },
+    "middle_trough": {
+      "date": "2022-01-27T00:00:00.000000000",
+      "price": 156.09974670410156,
+      "index": 18
+    },
+    "support_level": 156.09974670410156,
+    "validation_reasons": [
+      "Peaks not similar: 3.0% difference",
+      "Pattern too short: 26 days"
+    ]
+  },
+  {
+    "type": "Double Top",
+    "valid": true,
+    "confidence": 1.0,
+    "start_date": "2022-02-09T00:00:00.000000000",
+    "end_date": "2022-03-29T00:00:00.000000000",
+    "duration_days": 33,
+    "first_peak": {
+      "date": "2022-02-09T00:00:00.000000000",
+      "price": 173.0456085205078,
+      "index": 27
+    },
+    "second_peak": {
+      "date": "2022-03-29T00:00:00.000000000",
+      "price": 175.67649841308594,
+      "index": 60
+    },
+    "middle_trough": {
+      "date": "2022-03-14T00:00:00.000000000",
+      "price": 147.85643005371094,
+      "index": 49
+    },
+    "support_level": 147.85643005371094,
+    "validation_reasons": [
+      "All criteria met"
+    ]
+  },
+  {
+    "type": "Double Top",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2022-03-29T00:00:00.000000000",
+    "end_date": "2022-06-02T00:00:00.000000000",
+    "duration_days": 45,
+    "first_peak": {
+      "date": "2022-03-29T00:00:00.000000000",
+      "price": 175.67649841308594,
+      "index": 60
+    },
+    "second_peak": {
+      "date": "2022-06-02T00:00:00.000000000",
+      "price": 148.6536865234375,
+      "index": 105
+    },
+    "middle_trough": {
+      "date": "2022-05-19T00:00:00.000000000",
+      "price": 135.02798461914062,
+      "index": 96
+    },
+    "support_level": 135.02798461914062,
+    "validation_reasons": [
+      "Peaks not similar: 15.4% difference"
+    ]
+  },
+  {
+    "type": "Double Top",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2022-06-02T00:00:00.000000000",
+    "end_date": "2022-08-17T00:00:00.000000000",
+    "duration_days": 52,
+    "first_peak": {
+      "date": "2022-06-02T00:00:00.000000000",
+      "price": 148.6536865234375,
+      "index": 105
+    },
+    "second_peak": {
+      "date": "2022-08-17T00:00:00.000000000",
+      "price": 171.83746337890625,
+      "index": 157
+    },
+    "middle_trough": {
+      "date": "2022-06-16T00:00:00.000000000",
+      "price": 127.86122131347656,
+      "index": 115
+    },
+    "support_level": 127.86122131347656,
+    "validation_reasons": [
+      "Peaks not similar: 13.5% difference"
+    ]
+  },
+  {
+    "type": "Double Top",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2022-08-17T00:00:00.000000000",
+    "end_date": "2022-10-28T00:00:00.000000000",
+    "duration_days": 51,
+    "first_peak": {
+      "date": "2022-08-17T00:00:00.000000000",
+      "price": 171.83746337890625,
+      "index": 157
+    },
+    "second_peak": {
+      "date": "2022-10-28T00:00:00.000000000",
+      "price": 153.3197784423828,
+      "index": 208
+    },
+    "middle_trough": {
+      "date": "2022-09-30T00:00:00.000000000",
+      "price": 136.05235290527344,
+      "index": 188
+    },
+    "support_level": 136.05235290527344,
+    "validation_reasons": [
+      "Peaks not similar: 10.8% difference"
+    ]
+  },
+  {
+    "type": "Double Top",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2022-10-28T00:00:00.000000000",
+    "end_date": "2022-11-18T00:00:00.000000000",
+    "duration_days": 15,
+    "first_peak": {
+      "date": "2022-10-28T00:00:00.000000000",
+      "price": 153.3197784423828,
+      "index": 208
+    },
+    "second_peak": {
+      "date": "2022-11-18T00:00:00.000000000",
+      "price": 149.18600463867188,
+      "index": 223
+    },
+    "middle_trough": {
+      "date": "2022-11-09T00:00:00.000000000",
+      "price": 132.9943389892578,
+      "index": 216
+    },
+    "support_level": 132.9943389892578,
+    "validation_reasons": [
+      "Pattern too short: 15 days"
+    ]
+  },
+  {
+    "type": "Double Top",
+    "valid": true,
+    "confidence": 1.0,
+    "start_date": "2022-11-18T00:00:00.000000000",
+    "end_date": "2023-02-15T00:00:00.000000000",
+    "duration_days": 59,
+    "first_peak": {
+      "date": "2022-11-18T00:00:00.000000000",
+      "price": 149.18600463867188,
+      "index": 223
+    },
+    "second_peak": {
+      "date": "2023-02-15T00:00:00.000000000",
+      "price": 153.40365600585938,
+      "index": 282
+    },
+    "middle_trough": {
+      "date": "2023-01-05T00:00:00.000000000",
+      "price": 123.2813491821289,
+      "index": 254
+    },
+    "support_level": 123.2813491821289,
+    "validation_reasons": [
+      "All criteria met"
+    ]
+  },
+  {
+    "type": "Double Top",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2023-02-15T00:00:00.000000000",
+    "end_date": "2023-07-31T00:00:00.000000000",
+    "duration_days": 113,
+    "first_peak": {
+      "date": "2023-02-15T00:00:00.000000000",
+      "price": 153.40365600585938,
+      "index": 282
+    },
+    "second_peak": {
+      "date": "2023-07-31T00:00:00.000000000",
+      "price": 194.28208923339844,
+      "index": 395
+    },
+    "middle_trough": {
+      "date": "2023-03-01T00:00:00.000000000",
+      "price": 143.5079345703125,
+      "index": 291
+    },
+    "support_level": 143.5079345703125,
+    "validation_reasons": [
+      "Peaks not similar: 21.0% difference"
+    ]
+  },
+  {
+    "type": "Double Top",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2023-07-31T00:00:00.000000000",
+    "end_date": "2023-09-05T00:00:00.000000000",
+    "duration_days": 25,
+    "first_peak": {
+      "date": "2023-07-31T00:00:00.000000000",
+      "price": 194.28208923339844,
+      "index": 395
+    },
+    "second_peak": {
+      "date": "2023-09-05T00:00:00.000000000",
+      "price": 187.8599395751953,
+      "index": 420
+    },
+    "middle_trough": {
+      "date": "2023-08-17T00:00:00.000000000",
+      "price": 172.3122100830078,
+      "index": 408
+    },
+    "support_level": 172.3122100830078,
+    "validation_reasons": [
+      "Peaks not similar: 3.3% difference",
+      "Pattern too short: 25 days"
+    ]
+  },
+  {
+    "type": "Double Top",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2023-09-05T00:00:00.000000000",
+    "end_date": "2023-10-12T00:00:00.000000000",
+    "duration_days": 27,
+    "first_peak": {
+      "date": "2023-09-05T00:00:00.000000000",
+      "price": 187.8599395751953,
+      "index": 420
+    },
+    "second_peak": {
+      "date": "2023-10-12T00:00:00.000000000",
+      "price": 178.95713806152344,
+      "index": 447
+    },
+    "middle_trough": {
+      "date": "2023-09-27T00:00:00.000000000",
+      "price": 168.77684020996094,
+      "index": 436
+    },
+    "support_level": 168.77684020996094,
+    "validation_reasons": [
+      "Peaks not similar: 4.7% difference",
+      "Pattern too short: 27 days"
+    ]
+  },
+  {
+    "type": "Double Top",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2023-10-12T00:00:00.000000000",
+    "end_date": "2023-12-14T00:00:00.000000000",
+    "duration_days": 44,
+    "first_peak": {
+      "date": "2023-10-12T00:00:00.000000000",
+      "price": 178.95713806152344,
+      "index": 447
+    },
+    "second_peak": {
+      "date": "2023-12-14T00:00:00.000000000",
+      "price": 196.4468231201172,
+      "index": 491
+    },
+    "middle_trough": {
+      "date": "2023-10-26T00:00:00.000000000",
+      "price": 165.27117919921875,
+      "index": 457
+    },
+    "support_level": 165.27117919921875,
+    "validation_reasons": [
+      "Peaks not similar: 8.9% difference"
+    ]
+  },
+  {
+    "type": "Double Top",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2023-12-14T00:00:00.000000000",
+    "end_date": "2024-01-23T00:00:00.000000000",
+    "duration_days": 25,
+    "first_peak": {
+      "date": "2023-12-14T00:00:00.000000000",
+      "price": 196.4468231201172,
+      "index": 491
+    },
+    "second_peak": {
+      "date": "2024-01-23T00:00:00.000000000",
+      "price": 193.54139709472656,
+      "index": 516
+    },
+    "middle_trough": {
+      "date": "2024-01-05T00:00:00.000000000",
+      "price": 179.658935546875,
+      "index": 505
+    },
+    "support_level": 179.658935546875,
+    "validation_reasons": [
+      "Pattern too short: 25 days"
+    ]
+  },
+  {
+    "type": "Double Top",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2024-01-23T00:00:00.000000000",
+    "end_date": "2024-03-20T00:00:00.000000000",
+    "duration_days": 40,
+    "first_peak": {
+      "date": "2024-01-23T00:00:00.000000000",
+      "price": 193.54139709472656,
+      "index": 516
+    },
+    "second_peak": {
+      "date": "2024-03-20T00:00:00.000000000",
+      "price": 177.39610290527344,
+      "index": 556
+    },
+    "middle_trough": {
+      "date": "2024-03-07T00:00:00.000000000",
+      "price": 167.79502868652344,
+      "index": 547
+    },
+    "support_level": 167.79502868652344,
+    "validation_reasons": [
+      "Peaks not similar: 8.3% difference"
+    ]
+  },
+  {
+    "type": "Double Top",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2024-03-20T00:00:00.000000000",
+    "end_date": "2024-07-16T00:00:00.000000000",
+    "duration_days": 80,
+    "first_peak": {
+      "date": "2024-03-20T00:00:00.000000000",
+      "price": 177.39610290527344,
+      "index": 556
+    },
+    "second_peak": {
+      "date": "2024-07-16T00:00:00.000000000",
+      "price": 233.4619903564453,
+      "index": 636
+    },
+    "middle_trough": {
+      "date": "2024-04-19T00:00:00.000000000",
+      "price": 163.8235626220703,
+      "index": 577
+    },
+    "support_level": 163.8235626220703,
+    "validation_reasons": [
+      "Peaks not similar: 24.0% difference"
+    ]
+  },
+  {
+    "type": "Double Top",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2024-04-12T00:00:00.000000000",
+    "end_date": "2024-07-16T00:00:00.000000000",
+    "duration_days": 64,
+    "first_peak": {
+      "date": "2024-04-12T00:00:00.000000000",
+      "price": 175.29119873046875,
+      "index": 572
+    },
+    "second_peak": {
+      "date": "2024-07-16T00:00:00.000000000",
+      "price": 233.4619903564453,
+      "index": 636
+    },
+    "middle_trough": {
+      "date": "2024-04-19T00:00:00.000000000",
+      "price": 163.8235626220703,
+      "index": 577
+    },
+    "support_level": 163.8235626220703,
+    "validation_reasons": [
+      "Peaks not similar: 24.9% difference"
+    ]
+  },
+  {
+    "type": "Double Top",
+    "valid": true,
+    "confidence": 1.0,
+    "start_date": "2024-07-16T00:00:00.000000000",
+    "end_date": "2024-08-29T00:00:00.000000000",
+    "duration_days": 32,
+    "first_peak": {
+      "date": "2024-07-16T00:00:00.000000000",
+      "price": 233.4619903564453,
+      "index": 636
+    },
+    "second_peak": {
+      "date": "2024-08-29T00:00:00.000000000",
+      "price": 228.7255096435547,
+      "index": 668
+    },
+    "middle_trough": {
+      "date": "2024-08-06T00:00:00.000000000",
+      "price": 206.0315399169922,
+      "index": 651
+    },
+    "support_level": 206.0315399169922,
+    "validation_reasons": [
+      "All criteria met"
+    ]
+  },
+  {
+    "type": "Double Top",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2024-08-29T00:00:00.000000000",
+    "end_date": "2024-09-30T00:00:00.000000000",
+    "duration_days": 21,
+    "first_peak": {
+      "date": "2024-08-29T00:00:00.000000000",
+      "price": 228.7255096435547,
+      "index": 668
+    },
+    "second_peak": {
+      "date": "2024-09-30T00:00:00.000000000",
+      "price": 231.920654296875,
+      "index": 689
+    },
+    "middle_trough": {
+      "date": "2024-09-16T00:00:00.000000000",
+      "price": 215.3179168701172,
+      "index": 679
+    },
+    "support_level": 215.3179168701172,
+    "validation_reasons": [
+      "Pattern too short: 21 days"
+    ]
+  },
+  {
+    "type": "Double Top",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2024-09-30T00:00:00.000000000",
+    "end_date": "2024-10-21T00:00:00.000000000",
+    "duration_days": 15,
+    "first_peak": {
+      "date": "2024-09-30T00:00:00.000000000",
+      "price": 231.920654296875,
+      "index": 689
+    },
+    "second_peak": {
+      "date": "2024-10-21T00:00:00.000000000",
+      "price": 235.384521484375,
+      "index": 704
+    },
+    "middle_trough": {
+      "date": "2024-10-07T00:00:00.000000000",
+      "price": 220.66302490234372,
+      "index": 694
+    },
+    "support_level": 220.66302490234372,
+    "validation_reasons": [
+      "Pattern too short: 15 days"
+    ]
+  },
+  {
+    "type": "Double Top",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2024-10-21T00:00:00.000000000",
+    "end_date": "2024-12-26T00:00:00.000000000",
+    "duration_days": 46,
+    "first_peak": {
+      "date": "2024-10-21T00:00:00.000000000",
+      "price": 235.384521484375,
+      "index": 704
+    },
+    "second_peak": {
+      "date": "2024-12-26T00:00:00.000000000",
+      "price": 258.1037292480469,
+      "index": 750
+    },
+    "middle_trough": {
+      "date": "2024-11-04T00:00:00.000000000",
+      "price": 220.9815368652344,
+      "index": 714
+    },
+    "support_level": 220.9815368652344,
+    "validation_reasons": [
+      "Peaks not similar: 8.8% difference"
+    ]
+  },
+  {
+    "type": "Double Bottom",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2022-01-27T00:00:00.000000000",
+    "end_date": "2022-03-14T00:00:00.000000000",
+    "duration_days": 31,
+    "first_trough": {
+      "date": "2022-01-27T00:00:00.000000000",
+      "price": 156.09974670410156,
+      "index": 18
+    },
+    "second_trough": {
+      "date": "2022-03-14T00:00:00.000000000",
+      "price": 147.85643005371094,
+      "index": 49
+    },
+    "middle_peak": {
+      "date": "2022-02-09T00:00:00.000000000",
+      "price": 173.0456085205078,
+      "index": 27
+    },
+    "resistance_level": 173.0456085205078,
+    "validation_reasons": [
+      "Troughs not similar: 5.3% difference"
+    ]
+  },
+  {
+    "type": "Double Bottom",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2022-03-14T00:00:00.000000000",
+    "end_date": "2022-05-19T00:00:00.000000000",
+    "duration_days": 47,
+    "first_trough": {
+      "date": "2022-03-14T00:00:00.000000000",
+      "price": 147.85643005371094,
+      "index": 49
+    },
+    "second_trough": {
+      "date": "2022-05-19T00:00:00.000000000",
+      "price": 135.02798461914062,
+      "index": 96
+    },
+    "middle_peak": {
+      "date": "2022-03-29T00:00:00.000000000",
+      "price": 175.67649841308594,
+      "index": 60
+    },
+    "resistance_level": 175.67649841308594,
+    "validation_reasons": [
+      "Troughs not similar: 8.7% difference"
+    ]
+  },
+  {
+    "type": "Double Bottom",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2022-05-19T00:00:00.000000000",
+    "end_date": "2022-06-16T00:00:00.000000000",
+    "duration_days": 19,
+    "first_trough": {
+      "date": "2022-05-19T00:00:00.000000000",
+      "price": 135.02798461914062,
+      "index": 96
+    },
+    "second_trough": {
+      "date": "2022-06-16T00:00:00.000000000",
+      "price": 127.86122131347656,
+      "index": 115
+    },
+    "middle_peak": {
+      "date": "2022-06-02T00:00:00.000000000",
+      "price": 148.6536865234375,
+      "index": 105
+    },
+    "resistance_level": 148.6536865234375,
+    "validation_reasons": [
+      "Troughs not similar: 5.3% difference",
+      "Pattern too short: 19 days"
+    ]
+  },
+  {
+    "type": "Double Bottom",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2022-06-16T00:00:00.000000000",
+    "end_date": "2022-09-30T00:00:00.000000000",
+    "duration_days": 73,
+    "first_trough": {
+      "date": "2022-06-16T00:00:00.000000000",
+      "price": 127.86122131347656,
+      "index": 115
+    },
+    "second_trough": {
+      "date": "2022-09-30T00:00:00.000000000",
+      "price": 136.05235290527344,
+      "index": 188
+    },
+    "middle_peak": {
+      "date": "2022-08-17T00:00:00.000000000",
+      "price": 171.83746337890625,
+      "index": 157
+    },
+    "resistance_level": 171.83746337890625,
+    "validation_reasons": [
+      "Troughs not similar: 6.0% difference"
+    ]
+  },
+  {
+    "type": "Double Bottom",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2022-09-30T00:00:00.000000000",
+    "end_date": "2022-11-09T00:00:00.000000000",
+    "duration_days": 28,
+    "first_trough": {
+      "date": "2022-09-30T00:00:00.000000000",
+      "price": 136.05235290527344,
+      "index": 188
+    },
+    "second_trough": {
+      "date": "2022-11-09T00:00:00.000000000",
+      "price": 132.9943389892578,
+      "index": 216
+    },
+    "middle_peak": {
+      "date": "2022-10-28T00:00:00.000000000",
+      "price": 153.3197784423828,
+      "index": 208
+    },
+    "resistance_level": 153.3197784423828,
+    "validation_reasons": [
+      "Pattern too short: 28 days"
+    ]
+  },
+  {
+    "type": "Double Bottom",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2022-11-09T00:00:00.000000000",
+    "end_date": "2023-01-05T00:00:00.000000000",
+    "duration_days": 38,
+    "first_trough": {
+      "date": "2022-11-09T00:00:00.000000000",
+      "price": 132.9943389892578,
+      "index": 216
+    },
+    "second_trough": {
+      "date": "2023-01-05T00:00:00.000000000",
+      "price": 123.2813491821289,
+      "index": 254
+    },
+    "middle_peak": {
+      "date": "2022-11-18T00:00:00.000000000",
+      "price": 149.18600463867188,
+      "index": 223
+    },
+    "resistance_level": 149.18600463867188,
+    "validation_reasons": [
+      "Troughs not similar: 7.3% difference"
+    ]
+  },
+  {
+    "type": "Double Bottom",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2023-01-05T00:00:00.000000000",
+    "end_date": "2023-03-01T00:00:00.000000000",
+    "duration_days": 37,
+    "first_trough": {
+      "date": "2023-01-05T00:00:00.000000000",
+      "price": 123.2813491821289,
+      "index": 254
+    },
+    "second_trough": {
+      "date": "2023-03-01T00:00:00.000000000",
+      "price": 143.5079345703125,
+      "index": 291
+    },
+    "middle_peak": {
+      "date": "2023-02-15T00:00:00.000000000",
+      "price": 153.40365600585938,
+      "index": 282
+    },
+    "resistance_level": 153.40365600585938,
+    "validation_reasons": [
+      "Troughs not similar: 14.1% difference"
+    ]
+  },
+  {
+    "type": "Double Bottom",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2023-03-01T00:00:00.000000000",
+    "end_date": "2023-08-17T00:00:00.000000000",
+    "duration_days": 117,
+    "first_trough": {
+      "date": "2023-03-01T00:00:00.000000000",
+      "price": 143.5079345703125,
+      "index": 291
+    },
+    "second_trough": {
+      "date": "2023-08-17T00:00:00.000000000",
+      "price": 172.3122100830078,
+      "index": 408
+    },
+    "middle_peak": {
+      "date": "2023-07-31T00:00:00.000000000",
+      "price": 194.28208923339844,
+      "index": 395
+    },
+    "resistance_level": 194.28208923339844,
+    "validation_reasons": [
+      "Troughs not similar: 16.7% difference"
+    ]
+  },
+  {
+    "type": "Double Bottom",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2023-08-17T00:00:00.000000000",
+    "end_date": "2023-09-27T00:00:00.000000000",
+    "duration_days": 28,
+    "first_trough": {
+      "date": "2023-08-17T00:00:00.000000000",
+      "price": 172.3122100830078,
+      "index": 408
+    },
+    "second_trough": {
+      "date": "2023-09-27T00:00:00.000000000",
+      "price": 168.77684020996094,
+      "index": 436
+    },
+    "middle_peak": {
+      "date": "2023-09-05T00:00:00.000000000",
+      "price": 187.8599395751953,
+      "index": 420
+    },
+    "resistance_level": 187.8599395751953,
+    "validation_reasons": [
+      "Pattern too short: 28 days"
+    ]
+  },
+  {
+    "type": "Double Bottom",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2023-09-27T00:00:00.000000000",
+    "end_date": "2023-10-26T00:00:00.000000000",
+    "duration_days": 21,
+    "first_trough": {
+      "date": "2023-09-27T00:00:00.000000000",
+      "price": 168.77684020996094,
+      "index": 436
+    },
+    "second_trough": {
+      "date": "2023-10-26T00:00:00.000000000",
+      "price": 165.27117919921875,
+      "index": 457
+    },
+    "middle_peak": {
+      "date": "2023-10-12T00:00:00.000000000",
+      "price": 178.95713806152344,
+      "index": 447
+    },
+    "resistance_level": 178.95713806152344,
+    "validation_reasons": [
+      "Pattern too short: 21 days"
+    ]
+  },
+  {
+    "type": "Double Bottom",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2023-10-26T00:00:00.000000000",
+    "end_date": "2024-01-05T00:00:00.000000000",
+    "duration_days": 48,
+    "first_trough": {
+      "date": "2023-10-26T00:00:00.000000000",
+      "price": 165.27117919921875,
+      "index": 457
+    },
+    "second_trough": {
+      "date": "2024-01-05T00:00:00.000000000",
+      "price": 179.658935546875,
+      "index": 505
+    },
+    "middle_peak": {
+      "date": "2023-12-14T00:00:00.000000000",
+      "price": 196.4468231201172,
+      "index": 491
+    },
+    "resistance_level": 196.4468231201172,
+    "validation_reasons": [
+      "Troughs not similar: 8.0% difference"
+    ]
+  },
+  {
+    "type": "Double Bottom",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2024-01-05T00:00:00.000000000",
+    "end_date": "2024-03-07T00:00:00.000000000",
+    "duration_days": 42,
+    "first_trough": {
+      "date": "2024-01-05T00:00:00.000000000",
+      "price": 179.658935546875,
+      "index": 505
+    },
+    "second_trough": {
+      "date": "2024-03-07T00:00:00.000000000",
+      "price": 167.79502868652344,
+      "index": 547
+    },
+    "middle_peak": {
+      "date": "2024-01-23T00:00:00.000000000",
+      "price": 193.54139709472656,
+      "index": 516
+    },
+    "resistance_level": 193.54139709472656,
+    "validation_reasons": [
+      "Troughs not similar: 6.6% difference"
+    ]
+  },
+  {
+    "type": "Double Bottom",
+    "valid": true,
+    "confidence": 1.0,
+    "start_date": "2024-03-07T00:00:00.000000000",
+    "end_date": "2024-04-19T00:00:00.000000000",
+    "duration_days": 30,
+    "first_trough": {
+      "date": "2024-03-07T00:00:00.000000000",
+      "price": 167.79502868652344,
+      "index": 547
+    },
+    "second_trough": {
+      "date": "2024-04-19T00:00:00.000000000",
+      "price": 163.8235626220703,
+      "index": 577
+    },
+    "middle_peak": {
+      "date": "2024-03-20T00:00:00.000000000",
+      "price": 177.39610290527344,
+      "index": 556
+    },
+    "resistance_level": 177.39610290527344,
+    "validation_reasons": [
+      "All criteria met"
+    ]
+  },
+  {
+    "type": "Double Bottom",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2024-04-19T00:00:00.000000000",
+    "end_date": "2024-08-06T00:00:00.000000000",
+    "duration_days": 74,
+    "first_trough": {
+      "date": "2024-04-19T00:00:00.000000000",
+      "price": 163.8235626220703,
+      "index": 577
+    },
+    "second_trough": {
+      "date": "2024-08-06T00:00:00.000000000",
+      "price": 206.0315399169922,
+      "index": 651
+    },
+    "middle_peak": {
+      "date": "2024-07-16T00:00:00.000000000",
+      "price": 233.4619903564453,
+      "index": 636
+    },
+    "resistance_level": 233.4619903564453,
+    "validation_reasons": [
+      "Troughs not similar: 20.5% difference"
+    ]
+  },
+  {
+    "type": "Double Bottom",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2024-08-06T00:00:00.000000000",
+    "end_date": "2024-09-16T00:00:00.000000000",
+    "duration_days": 28,
+    "first_trough": {
+      "date": "2024-08-06T00:00:00.000000000",
+      "price": 206.0315399169922,
+      "index": 651
+    },
+    "second_trough": {
+      "date": "2024-09-16T00:00:00.000000000",
+      "price": 215.3179168701172,
+      "index": 679
+    },
+    "middle_peak": {
+      "date": "2024-08-29T00:00:00.000000000",
+      "price": 228.7255096435547,
+      "index": 668
+    },
+    "resistance_level": 228.7255096435547,
+    "validation_reasons": [
+      "Troughs not similar: 4.3% difference",
+      "Pattern too short: 28 days"
+    ]
+  },
+  {
+    "type": "Double Bottom",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2024-09-16T00:00:00.000000000",
+    "end_date": "2024-10-07T00:00:00.000000000",
+    "duration_days": 15,
+    "first_trough": {
+      "date": "2024-09-16T00:00:00.000000000",
+      "price": 215.3179168701172,
+      "index": 679
+    },
+    "second_trough": {
+      "date": "2024-10-07T00:00:00.000000000",
+      "price": 220.66302490234372,
+      "index": 694
+    },
+    "middle_peak": {
+      "date": "2024-09-30T00:00:00.000000000",
+      "price": 231.920654296875,
+      "index": 689
+    },
+    "resistance_level": 231.920654296875,
+    "validation_reasons": [
+      "Pattern too short: 15 days"
+    ]
+  },
+  {
+    "type": "Double Bottom",
+    "valid": false,
+    "confidence": 0.5,
+    "start_date": "2024-10-07T00:00:00.000000000",
+    "end_date": "2024-11-04T00:00:00.000000000",
+    "duration_days": 20,
+    "first_trough": {
+      "date": "2024-10-07T00:00:00.000000000",
+      "price": 220.66302490234372,
+      "index": 694
+    },
+    "second_trough": {
+      "date": "2024-11-04T00:00:00.000000000",
+      "price": 220.9815368652344,
+      "index": 714
+    },
+    "middle_peak": {
+      "date": "2024-10-21T00:00:00.000000000",
+      "price": 235.384521484375,
+      "index": 704
+    },
+    "resistance_level": 235.384521484375,
+    "validation_reasons": [
+      "Pattern too short: 20 days"
+    ]
+  },
+  {
+    "type": "Symmetric Triangle",
+    "valid": true,
+    "confidence": 0.9,
+    "start_date": "2024-06-21T00:00:00.000000000",
+    "end_date": "2024-09-16T00:00:00.000000000",
+    "duration_days": 60,
+    "upper_trendline": {
+      "slope": -0.14801502227783203,
+      "intercept": 327.5995445251465,
+      "r_squared": 1.0,
+      "touch_points": 2
+    },
+    "lower_trendline": {
+      "slope": 0.3316563197544643,
+      "intercept": -9.876724243164062,
+      "r_squared": 1.0,
+      "touch_points": 2
+    },
+    "peak_indices": [
+      636,
+      668
+    ],
+    "trough_indices": [
+      651,
+      679
+    ],
+    "validation_reasons": [
+      "All criteria met"
+    ]
+  },
+  {
+    "type": "Bear Pennant",
+    "valid": false,
+    "confidence": 0.4,
+    "pole_start_date": "2022-01-11T00:00:00.000000000",
+    "pole_end_date": "2022-01-26T00:00:00.000000000",
+    "pattern_start_date": "2022-01-26T00:00:00.000000000",
+    "pattern_end_date": "2022-02-23T00:00:00.000000000",
+    "pole_duration_days": 10,
+    "pattern_duration_days": 20,
+    "pole_change_pct": -8.790279688656613,
+    "pole_start_price": 171.6489715576172,
+    "pole_end_price": 156.560546875,
+    "upper_trendline": {
+      "slope": -0.29029533511302513,
+      "intercept": 179.42764082111296
+    },
+    "lower_trendline": {
+      "slope": 0.9619480256111391,
+      "intercept": 140.29854706794984
+    },
+    "validation_reasons": [
+      "Volume not decreasing sufficiently",
+      "Pattern not counter-trend"
+    ]
+  },
+  {
+    "type": "Bull Flag",
+    "valid": false,
+    "confidence": 0.4,
+    "pole_start_date": "2022-03-14T00:00:00.000000000",
+    "pole_end_date": "2022-03-28T00:00:00.000000000",
+    "pattern_start_date": "2022-03-28T00:00:00.000000000",
+    "pattern_end_date": "2022-04-25T00:00:00.000000000",
+    "pole_duration_days": 10,
+    "pattern_duration_days": 20,
+    "pole_change_pct": 16.58478259725391,
+    "pole_start_price": 147.85643005371094,
+    "pole_end_price": 172.3780975341797,
+    "upper_trendline": {
+      "slope": -0.804957482122606,
+      "intercept": 225.0275586035944
+    },
+    "lower_trendline": {
+      "slope": -0.8049583435058594,
+      "intercept": 220.80324935913086
+    },
+    "validation_reasons": [
+      "Volume not decreasing sufficiently"
+    ]
+  },
+  {
+    "type": "Bear Pennant",
+    "valid": false,
+    "confidence": 0.4,
+    "pole_start_date": "2022-08-16T00:00:00.000000000",
+    "pole_end_date": "2022-08-30T00:00:00.000000000",
+    "pattern_start_date": "2022-08-30T00:00:00.000000000",
+    "pattern_end_date": "2022-09-27T00:00:00.000000000",
+    "pole_duration_days": 10,
+    "pattern_duration_days": 20,
+    "pole_change_pct": -8.160451830635173,
+    "pole_start_price": 170.3411102294922,
+    "pole_end_price": 156.4405059814453,
+    "upper_trendline": {
+      "slope": -1.0714187622070312,
+      "intercept": 347.31712341308594
+    },
+    "lower_trendline": {
+      "slope": -0.0531646728515625,
+      "intercept": 157.82142028808593
+    },
+    "validation_reasons": [
+      "Volume not decreasing sufficiently",
+      "Pattern not counter-trend"
+    ]
+  },
+  {
+    "type": "Bear Pennant",
+    "valid": false,
+    "confidence": 0.4,
+    "pole_start_date": "2022-10-25T00:00:00.000000000",
+    "pole_end_date": "2022-11-08T00:00:00.000000000",
+    "pattern_start_date": "2022-11-08T00:00:00.000000000",
+    "pattern_end_date": "2022-12-06T00:00:00.000000000",
+    "pole_duration_days": 10,
+    "pattern_duration_days": 20,
+    "pole_change_pct": -8.276616236320796,
+    "pole_start_price": 149.97262573242188,
+    "pole_end_price": 137.55996704101562,
+    "upper_trendline": {
+      "slope": -0.36731910705566406,
+      "intercept": 231.09816551208496
+    },
+    "lower_trendline": {
+      "slope": 0.5840902993845385,
+      "intercept": 9.132094804630725
+    },
+    "validation_reasons": [
+      "Pattern not counter-trend"
+    ]
+  },
+  {
+    "type": "Bull Pennant",
+    "valid": false,
+    "confidence": 0.4,
+    "pole_start_date": "2023-08-18T00:00:00.000000000",
+    "pole_end_date": "2023-09-01T00:00:00.000000000",
+    "pattern_start_date": "2023-09-01T00:00:00.000000000",
+    "pattern_end_date": "2023-09-29T00:00:00.000000000",
+    "pole_duration_days": 10,
+    "pattern_duration_days": 20,
+    "pole_change_pct": 8.57929145376091,
+    "pole_start_price": 172.79747009277344,
+    "pole_end_price": 187.6222686767578,
+    "upper_trendline": {
+      "slope": -0.9805887662447417,
+      "intercept": 599.5469927665515
+    },
+    "lower_trendline": {
+      "slope": -0.37433319091796874,
+      "intercept": 331.98611145019527
+    },
+    "validation_reasons": [
+      "Pattern volatility too high",
+      "Volume not decreasing sufficiently"
+    ]
+  },
+  {
+    "type": "Bull Pennant",
+    "valid": true,
+    "confidence": 0.85,
+    "pole_start_date": "2024-06-21T00:00:00.000000000",
+    "pole_end_date": "2024-07-08T00:00:00.000000000",
+    "pattern_start_date": "2024-07-08T00:00:00.000000000",
+    "pattern_end_date": "2024-08-02T00:00:00.000000000",
+    "pole_duration_days": 10,
+    "pattern_duration_days": 20,
+    "pole_change_pct": 9.798057964599662,
+    "pole_start_price": 206.2900390625,
+    "pole_end_price": 226.50245666503903,
+    "upper_trendline": {
+      "slope": -1.1295298482035543,
+      "intercept": 950.3939274379186
+    },
+    "lower_trendline": {
+      "slope": -1.002171325683591,
+      "intercept": 860.6283706665021
+    },
+    "validation_reasons": [
+      "All criteria met"
+    ]
+  },
+  {
+    "type": "Bull Pennant",
+    "valid": false,
+    "confidence": 0.4,
+    "pole_start_date": "2024-06-24T00:00:00.000000000",
+    "pole_end_date": "2024-07-09T00:00:00.000000000",
+    "pattern_start_date": "2024-07-09T00:00:00.000000000",
+    "pattern_end_date": "2024-08-05T00:00:00.000000000",
+    "pole_duration_days": 10,
+    "pattern_duration_days": 20,
+    "pole_change_pct": 9.868353525378977,
+    "pole_start_price": 206.936279296875,
+    "pole_end_price": 227.35748291015625,
+    "upper_trendline": {
+      "slope": -1.1295298482035543,
+      "intercept": 950.3939274379186
+    },
+    "lower_trendline": {
+      "slope": -1.002171325683591,
+      "intercept": 860.6283706665021
+    },
+    "validation_reasons": [
+      "Volume not decreasing sufficiently"
+    ]
+  },
+  {
+    "type": "Bull Pennant",
+    "valid": false,
+    "confidence": 0.4,
+    "pole_start_date": "2024-06-25T00:00:00.000000000",
+    "pole_end_date": "2024-07-10T00:00:00.000000000",
+    "pattern_start_date": "2024-07-10T00:00:00.000000000",
+    "pattern_end_date": "2024-08-06T00:00:00.000000000",
+    "pole_duration_days": 10,
+    "pattern_duration_days": 20,
+    "pole_change_pct": 11.436356311514617,
+    "pole_start_price": 207.86090087890625,
+    "pole_end_price": 231.6326141357422,
+    "upper_trendline": {
+      "slope": -1.1295298482035543,
+      "intercept": 950.3939274379186
+    },
+    "lower_trendline": {
+      "slope": -1.002171325683591,
+      "intercept": 860.6283706665021
+    },
+    "validation_reasons": [
+      "Pattern volatility too high",
+      "Volume not decreasing sufficiently"
+    ]
+  },
+  {
+    "type": "Bull Pennant",
+    "valid": true,
+    "confidence": 0.85,
+    "pole_start_date": "2024-08-05T00:00:00.000000000",
+    "pole_end_date": "2024-08-19T00:00:00.000000000",
+    "pattern_start_date": "2024-08-19T00:00:00.000000000",
+    "pattern_end_date": "2024-09-16T00:00:00.000000000",
+    "pole_duration_days": 10,
+    "pattern_duration_days": 20,
+    "pole_change_pct": 8.066831023121868,
+    "pole_start_price": 208.05975341796875,
+    "pole_end_price": 224.8435821533203,
+    "upper_trendline": {
+      "slope": -0.7763858371310763,
+      "intercept": 747.3512488471137
+    },
+    "lower_trendline": {
+      "slope": -0.3666267395019555,
+      "intercept": 466.563396453859
+    },
+    "validation_reasons": [
+      "All criteria met"
+    ]
+  },
+  {
+    "type": "Bull Pennant",
+    "valid": false,
+    "confidence": 0.4,
+    "pole_start_date": "2024-08-06T00:00:00.000000000",
+    "pole_end_date": "2024-08-20T00:00:00.000000000",
+    "pattern_start_date": "2024-08-20T00:00:00.000000000",
+    "pattern_end_date": "2024-09-17T00:00:00.000000000",
+    "pole_duration_days": 10,
+    "pattern_duration_days": 20,
+    "pole_change_pct": 9.430176657137816,
+    "pole_start_price": 206.0315399169922,
+    "pole_end_price": 225.46067810058597,
+    "upper_trendline": {
+      "slope": -0.7763858371310763,
+      "intercept": 747.3512488471137
+    },
+    "lower_trendline": {
+      "slope": -0.4774884444016682,
+      "intercept": 540.3307748941279
+    },
+    "validation_reasons": [
+      "Volume not decreasing sufficiently"
+    ]
+  },
+  {
+    "type": "Bull Pennant",
+    "valid": false,
+    "confidence": 0.4,
+    "pole_start_date": "2024-08-07T00:00:00.000000000",
+    "pole_end_date": "2024-08-21T00:00:00.000000000",
+    "pattern_start_date": "2024-08-21T00:00:00.000000000",
+    "pattern_end_date": "2024-09-18T00:00:00.000000000",
+    "pole_duration_days": 10,
+    "pattern_duration_days": 20,
+    "pole_change_pct": 8.026901729470055,
+    "pole_start_price": 208.6065673828125,
+    "pole_end_price": 225.3512115478516,
+    "upper_trendline": {
+      "slope": -0.7763858371310763,
+      "intercept": 747.3512488471137
+    },
+    "lower_trendline": {
+      "slope": -0.4774884444016682,
+      "intercept": 540.3307748941279
+    },
+    "validation_reasons": [
+      "Volume not decreasing sufficiently"
+    ]
+  },
+  {
+    "type": "Cup & Handle",
+    "valid": false,
+    "confidence": 0.3,
+    "cup_start_date": "2022-02-09T00:00:00.000000000",
+    "cup_bottom_date": "2022-05-19T00:00:00.000000000",
+    "cup_end_date": "2022-06-02T00:00:00.000000000",
+    "handle_end_date": "2022-07-15T00:00:00.000000000",
+    "cup_duration_days": 78,
+    "handle_duration_days": 30,
+    "left_peak": {
+      "date": "2022-02-09T00:00:00.000000000",
+      "price": 173.0456085205078,
+      "index": 27
+    },
+    "cup_bottom": {
+      "date": "2022-05-19T00:00:00.000000000",
+      "price": 135.02798461914062,
+      "index": 96
+    },
+    "right_peak": {
+      "date": "2022-06-02T00:00:00.000000000",
+      "price": 148.6536865234375,
+      "index": 105
+    },
+    "handle_low": {
+      "date": "2022-06-16T00:00:00.000000000",
+      "price": 127.86122131347656,
+      "index": 115
+    },
+    "cup_depth": 38.01762390136719,
+    "handle_depth": 20.792465209960938,
+    "breakout_level": 173.0456085205078,
+    "validation_reasons": [
+      "Cup peaks not similar: 14.1% difference",
+      "Handle too deep: 54.7% of cup depth",
+      "Handle rising instead of consolidating",
+      "Cup too short: 78 days"
+    ]
+  },
+  {
+    "type": "Cup & Handle",
+    "valid": false,
+    "confidence": 0.3,
+    "cup_start_date": "2022-08-17T00:00:00.000000000",
+    "cup_bottom_date": "2022-11-09T00:00:00.000000000",
+    "cup_end_date": "2022-11-18T00:00:00.000000000",
+    "handle_end_date": "2023-01-03T00:00:00.000000000",
+    "cup_duration_days": 66,
+    "handle_duration_days": 30,
+    "left_peak": {
+      "date": "2022-08-17T00:00:00.000000000",
+      "price": 171.83746337890625,
+      "index": 157
+    },
+    "cup_bottom": {
+      "date": "2022-11-09T00:00:00.000000000",
+      "price": 132.9943389892578,
+      "index": 216
+    },
+    "right_peak": {
+      "date": "2022-11-18T00:00:00.000000000",
+      "price": 149.18600463867188,
+      "index": 223
+    },
+    "handle_low": {
+      "date": "2023-01-03T00:00:00.000000000",
+      "price": 123.33064270019533,
+      "index": 252
+    },
+    "cup_depth": 38.84312438964844,
+    "handle_depth": 25.85536193847655,
+    "breakout_level": 171.83746337890625,
+    "validation_reasons": [
+      "Cup peaks not similar: 13.2% difference",
+      "Handle too deep: 66.6% of cup depth",
+      "Cup too short: 66 days"
+    ]
+  },
+  {
+    "type": "Cup & Handle",
+    "valid": false,
+    "confidence": 0.3,
+    "cup_start_date": "2022-10-28T00:00:00.000000000",
+    "cup_bottom_date": "2023-01-05T00:00:00.000000000",
+    "cup_end_date": "2023-02-15T00:00:00.000000000",
+    "handle_end_date": "2023-03-29T00:00:00.000000000",
+    "cup_duration_days": 74,
+    "handle_duration_days": 30,
+    "left_peak": {
+      "date": "2022-10-28T00:00:00.000000000",
+      "price": 153.3197784423828,
+      "index": 208
+    },
+    "cup_bottom": {
+      "date": "2023-01-05T00:00:00.000000000",
+      "price": 123.2813491821289,
+      "index": 254
+    },
+    "right_peak": {
+      "date": "2023-02-15T00:00:00.000000000",
+      "price": 153.40365600585938,
+      "index": 282
+    },
+    "handle_low": {
+      "date": "2023-03-01T00:00:00.000000000",
+      "price": 143.5079345703125,
+      "index": 291
+    },
+    "cup_depth": 30.12230682373047,
+    "handle_depth": 9.895721435546875,
+    "breakout_level": 153.40365600585938,
+    "validation_reasons": [
+      "Handle rising instead of consolidating",
+      "Cup too short: 74 days"
+    ]
+  },
+  {
+    "type": "Cup & Handle",
+    "valid": false,
+    "confidence": 0.3,
+    "cup_start_date": "2023-09-05T00:00:00.000000000",
+    "cup_bottom_date": "2023-10-26T00:00:00.000000000",
+    "cup_end_date": "2023-12-14T00:00:00.000000000",
+    "handle_end_date": "2024-01-29T00:00:00.000000000",
+    "cup_duration_days": 71,
+    "handle_duration_days": 30,
+    "left_peak": {
+      "date": "2023-09-05T00:00:00.000000000",
+      "price": 187.8599395751953,
+      "index": 420
+    },
+    "cup_bottom": {
+      "date": "2023-10-26T00:00:00.000000000",
+      "price": 165.27117919921875,
+      "index": 457
+    },
+    "right_peak": {
+      "date": "2023-12-14T00:00:00.000000000",
+      "price": 196.4468231201172,
+      "index": 491
+    },
+    "handle_low": {
+      "date": "2024-01-05T00:00:00.000000000",
+      "price": 179.658935546875,
+      "index": 505
+    },
+    "cup_depth": 31.175643920898438,
+    "handle_depth": 16.787887573242188,
+    "breakout_level": 196.4468231201172,
+    "validation_reasons": [
+      "Handle too deep: 53.8% of cup depth",
+      "Cup too short: 71 days"
+    ]
+  },
+  {
+    "type": "Cup & Handle",
+    "valid": false,
+    "confidence": 0.3,
+    "cup_start_date": "2023-10-12T00:00:00.000000000",
+    "cup_bottom_date": "2023-10-26T00:00:00.000000000",
+    "cup_end_date": "2024-01-23T00:00:00.000000000",
+    "handle_end_date": "2024-03-05T00:00:00.000000000",
+    "cup_duration_days": 69,
+    "handle_duration_days": 30,
+    "left_peak": {
+      "date": "2023-10-12T00:00:00.000000000",
+      "price": 178.95713806152344,
+      "index": 447
+    },
+    "cup_bottom": {
+      "date": "2023-10-26T00:00:00.000000000",
+      "price": 165.27117919921875,
+      "index": 457
+    },
+    "right_peak": {
+      "date": "2024-01-23T00:00:00.000000000",
+      "price": 193.54139709472656,
+      "index": 516
+    },
+    "handle_low": {
+      "date": "2024-03-05T00:00:00.000000000",
+      "price": 168.9070281982422,
+      "index": 545
+    },
+    "cup_depth": 28.270217895507812,
+    "handle_depth": 24.634368896484375,
+    "breakout_level": 193.54139709472656,
+    "validation_reasons": [
+      "Cup peaks not similar: 7.5% difference",
+      "Handle too deep: 87.1% of cup depth",
+      "Cup too short: 69 days"
+    ]
+  },
+  {
+    "type": "Cup & Handle",
+    "valid": false,
+    "confidence": 0.3,
+    "cup_start_date": "2023-12-14T00:00:00.000000000",
+    "cup_bottom_date": "2024-03-07T00:00:00.000000000",
+    "cup_end_date": "2024-03-20T00:00:00.000000000",
+    "handle_end_date": "2024-05-01T00:00:00.000000000",
+    "cup_duration_days": 65,
+    "handle_duration_days": 30,
+    "left_peak": {
+      "date": "2023-12-14T00:00:00.000000000",
+      "price": 196.4468231201172,
+      "index": 491
+    },
+    "cup_bottom": {
+      "date": "2024-03-07T00:00:00.000000000",
+      "price": 167.79502868652344,
+      "index": 547
+    },
+    "right_peak": {
+      "date": "2024-03-20T00:00:00.000000000",
+      "price": 177.39610290527344,
+      "index": 556
+    },
+    "handle_low": {
+      "date": "2024-04-19T00:00:00.000000000",
+      "price": 163.8235626220703,
+      "index": 577
+    },
+    "cup_depth": 28.65179443359375,
+    "handle_depth": 13.572540283203125,
+    "breakout_level": 196.4468231201172,
+    "validation_reasons": [
+      "Cup peaks not similar: 9.7% difference",
+      "Cup too short: 65 days"
+    ]
+  },
+  {
+    "type": "Cup & Handle",
+    "valid": false,
+    "confidence": 0.3,
+    "cup_start_date": "2024-01-23T00:00:00.000000000",
+    "cup_bottom_date": "2024-04-10T00:00:00.000000000",
+    "cup_end_date": "2024-04-12T00:00:00.000000000",
+    "handle_end_date": "2024-05-23T00:00:00.000000000",
+    "cup_duration_days": 56,
+    "handle_duration_days": 30,
+    "left_peak": {
+      "date": "2024-01-23T00:00:00.000000000",
+      "price": 193.54139709472656,
+      "index": 516
+    },
+    "cup_bottom": {
+      "date": "2024-04-10T00:00:00.000000000",
+      "price": 166.583740234375,
+      "index": 570
+    },
+    "right_peak": {
+      "date": "2024-04-12T00:00:00.000000000",
+      "price": 175.29119873046875,
+      "index": 572
+    },
+    "handle_low": {
+      "date": "2024-04-19T00:00:00.000000000",
+      "price": 163.8235626220703,
+      "index": 577
+    },
+    "cup_depth": 26.957656860351562,
+    "handle_depth": 11.467636108398438,
+    "breakout_level": 193.54139709472656,
+    "validation_reasons": [
+      "Cup peaks not similar: 9.4% difference",
+      "Handle rising instead of consolidating",
+      "Cup too short: 56 days"
+    ]
+  },
+  {
+    "type": "Cup & Handle",
+    "valid": false,
+    "confidence": 0.3,
+    "cup_start_date": "2024-04-12T00:00:00.000000000",
+    "cup_bottom_date": "2024-04-19T00:00:00.000000000",
+    "cup_end_date": "2024-07-16T00:00:00.000000000",
+    "handle_end_date": "2024-08-26T00:00:00.000000000",
+    "cup_duration_days": 64,
+    "handle_duration_days": 30,
+    "left_peak": {
+      "date": "2024-04-12T00:00:00.000000000",
+      "price": 175.29119873046875,
+      "index": 572
+    },
+    "cup_bottom": {
+      "date": "2024-04-19T00:00:00.000000000",
+      "price": 163.8235626220703,
+      "index": 577
+    },
+    "right_peak": {
+      "date": "2024-07-16T00:00:00.000000000",
+      "price": 233.4619903564453,
+      "index": 636
+    },
+    "handle_low": {
+      "date": "2024-08-06T00:00:00.000000000",
+      "price": 206.0315399169922,
+      "index": 651
+    },
+    "cup_depth": 69.638427734375,
+    "handle_depth": 27.430450439453125,
+    "breakout_level": 233.4619903564453,
+    "validation_reasons": [
+      "Cup peaks not similar: 24.9% difference",
+      "Handle rising instead of consolidating",
+      "Cup too short: 64 days"
+    ]
+  },
+  {
+    "type": "Cup & Handle",
+    "valid": false,
+    "confidence": 0.3,
+    "cup_start_date": "2024-07-16T00:00:00.000000000",
+    "cup_bottom_date": "2024-08-06T00:00:00.000000000",
+    "cup_end_date": "2024-10-21T00:00:00.000000000",
+    "handle_end_date": "2024-12-02T00:00:00.000000000",
+    "cup_duration_days": 68,
+    "handle_duration_days": 30,
+    "left_peak": {
+      "date": "2024-07-16T00:00:00.000000000",
+      "price": 233.4619903564453,
+      "index": 636
+    },
+    "cup_bottom": {
+      "date": "2024-08-06T00:00:00.000000000",
+      "price": 206.0315399169922,
+      "index": 651
+    },
+    "right_peak": {
+      "date": "2024-10-21T00:00:00.000000000",
+      "price": 235.384521484375,
+      "index": 704
+    },
+    "handle_low": {
+      "date": "2024-11-04T00:00:00.000000000",
+      "price": 220.9815368652344,
+      "index": 714
+    },
+    "cup_depth": 29.352981567382812,
+    "handle_depth": 14.402984619140597,
+    "breakout_level": 235.384521484375,
+    "validation_reasons": [
+      "Handle rising instead of consolidating",
+      "Cup too short: 68 days"
+    ]
+  }
+]
