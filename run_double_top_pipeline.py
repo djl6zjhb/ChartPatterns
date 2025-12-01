@@ -82,6 +82,10 @@ def run_double_top_pipeline(
     dt_candidates = detect_double_tops(df, peak_window=3, peak_tolerance=0.01,min_peak_gap=15, max_peak_gap=30, min_trough_drop=0.03, require_lower_second_vol=True)
 
     dt_confirmed = confirm_double_tops(df, dt_candidates, max_confirm_days=40)
+    # print("checking confirmed df")
+    # print(dt_confirmed.head())
+    # print(dt_candidates.columns)
+    # print(dt_confirmed.columns)
 
     if dt_confirmed.empty:
         print(f"[{ticker}] No confirmed double tops found. Consider loosening parameters.")
