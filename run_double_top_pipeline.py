@@ -16,6 +16,7 @@ def run_double_top_pipeline(
     start: str = "2015-01-01",
     end: str = "2024-12-31",
     horizons=(5, 20, 60),
+    double_top_params: dict = {},
     save_prefix: str | None = None,
     make_plots: bool = False,
     full_summary: pd.DataFrame = pd.DataFrame()
@@ -87,7 +88,7 @@ def run_double_top_pipeline(
         rand_events = pd.DataFrame()
         ma_events = pd.DataFrame()
         summary_df = pd.DataFrame()
-        return dt_events, rand_events, ma_events, summary_df, "", full_summary
+        return dt_events, dt_candidates, rand_events, ma_events, summary_df, "", full_summary
 
     # optional weekly-level top tagging; not implemented correctly yet
     # dt_confirmed = tag_weekly_top(df, dt_confirmed)
@@ -134,7 +135,7 @@ def run_double_top_pipeline(
             text_summary = f"Could not generate text summary (likely too few events). Error: {e}"
             print(text_summary)
 
-    return dt_events, rand_events, ma_events, summary_df, text_summary, full_summary
+    return dt_events, dt_candidates, rand_events, ma_events, summary_df, text_summary, full_summary
 
 
 if __name__ == "__main__":
@@ -153,8 +154,11 @@ if __name__ == "__main__":
         for fname in files:
             symbol = fname.split('.')[0]
             print(symbol)
-            dt_events, rand_events, ma_events, summary_df, text_summary, full_summary = run_double_top_pipeline(symbol, full_summary=full_summary)
-            # break  # only process the first file in this directory
-        # break  # stop after the top-level directory iteration
+            dt_events, dt_candidates, rand_events, ma_events, summary_df, text_summary, full_summary = run_double_top_pipeline(symbol, full_summary=full_summary)
+            break  # only process the first file in this directory
+        break  # stop after the top-level directory iteration
+    
+    print(dt_events.head())
+    print(dt_candidates.head())
 
-    full_summary.to_csv('double_top_events_all.csv', index=True)
+    # full_summary.to_csv('double_top_events_all.csv', index=True)
