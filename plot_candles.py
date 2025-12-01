@@ -46,7 +46,9 @@ def plot_candles(
 
     Assists in visualizing detected Double Top patterns on candlestick charts.
     
-    Function originally by ChatGPT, modified by me to make sure that DTs were being detected correctly.
+    Function originally by ChatGPT, modified by me to make sure that DTs were being detected correctly. 
+    The purpose is to visualize the detected double top patterns on candlestick charts to ensure that the detection algorithm is functioning as intended.
+    This is not used in the main pipeline, but is useful for debugging and validation.
     I have little experience with mplfinance, so I relied heavily on ChatGPT to generate this code.
     """
     
