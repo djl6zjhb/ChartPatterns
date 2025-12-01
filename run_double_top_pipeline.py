@@ -10,6 +10,7 @@ from evaluate_all import evaluate_all
 from plot_return_distributions import plot_return_distributions
 from plot_parameter_heatmap import plot_parameter_heatmap
 from summarize_pattern_performance import summarize_pattern_performance
+from label_events import label_events
 
 def run_double_top_pipeline(
     ticker: str,
@@ -140,6 +141,7 @@ def run_double_top_pipeline(
 
 if __name__ == "__main__":
     dt_events = None
+    dt_candidates = None
     rand_events = None
     ma_events = None
     summary_df = None
@@ -158,7 +160,9 @@ if __name__ == "__main__":
             break  # only process the first file in this directory
         break  # stop after the top-level directory iteration
     
-    print(dt_events.head())
-    print(dt_candidates.head())
+    print(dt_events)
+    print(dt_candidates)
+    dt_candidates = label_events(dt_candidates, dt_events)
+    print(dt_candidates)
 
     # full_summary.to_csv('double_top_events_all.csv', index=True)
