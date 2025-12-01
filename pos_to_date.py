@@ -1,6 +1,6 @@
 import pandas as pd
 
-def pos_to_date(df, dt_events) -> pd.DataFrame:
+def pos_to_date(df, dt_events, confirm_pos=True) -> pd.DataFrame:
     """
     Convert position-based indices in events_df to actual dates from df index.
     Assumes events_df has a 'position' column with integer positions.
@@ -13,7 +13,8 @@ def pos_to_date(df, dt_events) -> pd.DataFrame:
     dt_events['peak1_date'] = dates.loc[dt_events['peak1_pos']].values
     dt_events['trough_date'] = dates.loc[dt_events['trough_pos']].values
     dt_events['peak2_date'] = dates.loc[dt_events['peak2_pos']].values
-    dt_events['confirm_date'] = dates.loc[dt_events['confirm_pos']].values
+    if confirm_pos == True:
+        dt_events['confirm_date'] = dates.loc[dt_events['confirm_pos']].values
     
     
     return dt_events
