@@ -95,7 +95,7 @@ def prediction_pipeline(
 
     features = ['peak1_price', 'peak2_price', 'trough_price', 'peak_gap_days', 'vol1',
                 'vol2', 'vol2_vol1_ratio', 'peak_height_diff', 'peak_height_diff_pct', 
-                'retracement_depth1', 'retracement_depth2', 'volume_diff', 'volume_diff_pct', 
+                'retracement_depth1', 'retracement_depth2', 'volume_diff', 
                 'peak1_to_trough', 'trough_to_peak2']
     
     X = labeled_data[features]
