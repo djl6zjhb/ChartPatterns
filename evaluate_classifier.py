@@ -24,7 +24,7 @@ def evaluate_classifier(model, X, y, times, threshold=0.5,):
 
     X : Feature matrix.
 
-    y : Labels (0/1).
+    y : Labels
 
     times : column used to define chronological order (prevent data leakage)
 
