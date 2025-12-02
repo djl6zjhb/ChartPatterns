@@ -6,6 +6,7 @@ from confirm_double_tops import confirm_double_tops
 from pos_to_date import pos_to_date
 from label_events import label_events
 from xgboost import XGBClassifier
+from walk_forward_split import WalkForwardSplit
 
 def prediction_pipeline(
     tickers: list,
@@ -91,9 +92,42 @@ def prediction_pipeline(
         # Would prefer to use PurgedGroupTimeSeriesSplit from mlfinlab as found in quant research
         # However, this package is not compatible with Python 3.12, so I implemented a basic time-based split here
         # Source: López de Prado (2018), Advances in Financial Machine Learning, Chapter 7: Purged K-Fold CV (Wiley).
-    
 
-    return labeled_data
+    features = ['peak1_price', 'peak2_price', 'trough_price', 'peak_gap_days', 'vol1',
+                'vol2', 'vol2_vol1_ratio', 'peak_height_diff', 'peak_height_diff_pct', 
+                'retracement_depth1', 'retracement_depth2', 'volume_diff', 'volume_diff_pct', 
+                'peak1_to_trough', 'trough_to_peak2']
+    
+    X = labeled_data[features]
+    y = labeled_data['label']
+    times = labeled_data["peak2_date"]
+
+    splitter = WalkForwardSplit(n_splits=5)
+
+    model = XGBClassifier(
+        n_estimators=300,
+        max_depth=4,
+        learning_rate=0.05,
+        subsample=0.8,
+        colsample_bytree=0.8,
+        objective="binary:logistic",
+        n_jobs=-1,
+    )
+
+    fold_scores = []
+
+    for fold, (train_idx, test_idx) in enumerate(splitter.split(X, times=times), start=1):
+        X_train, X_test = X.iloc[train_idx], X.iloc[test_idx]
+        y_train, y_test = y.iloc[train_idx], y.iloc[test_idx]
+
+        model.fit(X_train, y_train)
+        score = model.score(X_test, y_test)
+        fold_scores.append(score)
+        print(f"Fold {fold}: score = {score:.4f}")
+
+    print("Mean CV score:", sum(fold_scores) / len(fold_scores))
+    
+    # return labeled_data
 
 if __name__ == "__main__":
     directory = "./sp500/sp500"
@@ -108,7 +142,7 @@ if __name__ == "__main__":
     labeled_data = prediction_pipeline(tickers)
     labeled_data = labeled_data.drop(labels=['peak1_pos', 'trough_pos', 'peak2_pos', 'trough_date','peak2_date'], axis=1)
     # print(labeled_data.sort_values(by='peak1_date', ascending=True))
-    print(labeled_data['label'].value_counts())
+    # print(labeled_data['label'].value_counts())
     
 
 
