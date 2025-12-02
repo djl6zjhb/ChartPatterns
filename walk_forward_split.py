@@ -1,7 +1,7 @@
 # Class generated from ChatGPT to implement a Walk-Forward Split cross-validation strategy.
 # I identified a package that would do this (mlfinlab) but it is not compatible with Python 3.12 yet.
 # This was a necessary step to prevent data leakage in my prediction pipeline.
-# To ensure correct implementation, I used generative AI (ChatGPT) to create this class.
+# To ensure correct implementation, I used generative AI (ChatGPT) to create this class.                                                                                            
 
 import numpy as np
 
@@ -28,7 +28,7 @@ class WalkForwardSplit:
     def get_n_splits(self, X=None, y=None, groups=None):
         return self.n_splits
 
-    def split(self, X, y=None, times=None):
+    def split(self, X, y=None, times=None, groups=None):
         """
         Generate indices for train/test for each fold.
 

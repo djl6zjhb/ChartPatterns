@@ -10,9 +10,6 @@ from sklearn.model_selection import RandomizedSearchCV
 
 from walk_forward_split import WalkForwardSplit
 from evaluate_classifier import evaluate_classifier
-from plot_metrics import plot_metrics
-from plot_roc_curve import plot_roc_curve
-from plot_pr_curve import plot_pr_curve
 
 
 def prediction_pipeline(
