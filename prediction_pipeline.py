@@ -62,6 +62,7 @@ def prediction_pipeline(
 
         # Inserting actual dates of events for sorting purposes to prevent leakage
         all_events = pos_to_date(df, all_events, confirm_pos=False)
+        all_events['Ticker'] = ticker
 
         labeled_data = pd.concat([labeled_data, all_events])
 
@@ -81,12 +82,16 @@ def prediction_pipeline(
     labeled_data['peak1_to_trough'] = (labeled_data['trough_pos'] - labeled_data['peak1_pos'])
     labeled_data['trough_to_peak2'] = (labeled_data['peak2_pos'] - labeled_data['trough_pos'])
     
+    # Momentum Indicators (need to add to initial dataset; implement if needed later)
 
+    # Step 4: Sort by peak2_date to prevent leakage
+    labeled_data = labeled_data.sort_values(by='peak2_date', ascending=True).reset_index(drop=True)
+
+    # Step 5: train/test split based on date
+        # Would prefer to use PurgedGroupTimeSeriesSplit from mlfinlab as found in quant research
+        # However, this package is not compatible with Python 3.12, so I implemented a basic time-based split here
+        # Source: López de Prado (2018), Advances in Financial Machine Learning, Chapter 7: Purged K-Fold CV (Wiley).
     
-
-
-
-    # Step 4: model training (placeholder - implement as needed)
 
     return labeled_data
 
@@ -98,12 +103,12 @@ if __name__ == "__main__":
         if os.path.isfile(os.path.join(directory, name)):
             tickers.append(name.split('.')[0])
 
-    tickers = tickers[:10]  # limit to first 10 tickers for testing
+    # tickers = tickers[:10]  # limit to first 10 tickers for testing
     
     labeled_data = prediction_pipeline(tickers)
     labeled_data = labeled_data.drop(labels=['peak1_pos', 'trough_pos', 'peak2_pos', 'trough_date','peak2_date'], axis=1)
-    print(labeled_data.sort_values(by='peak1_date', ascending=True))
+    # print(labeled_data.sort_values(by='peak1_date', ascending=True))
     print(labeled_data['label'].value_counts())
-    print(labeled_data.columns)
+    
 
 
