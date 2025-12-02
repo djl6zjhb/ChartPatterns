@@ -6,7 +6,14 @@ from confirm_double_tops import confirm_double_tops
 from pos_to_date import pos_to_date
 from label_events import label_events
 from xgboost import XGBClassifier
+from sklearn.model_selection import RandomizedSearchCV
+
 from walk_forward_split import WalkForwardSplit
+from evaluate_classifier import evaluate_classifier
+from plot_metrics import plot_metrics
+from plot_roc_curve import plot_roc_curve
+from plot_pr_curve import plot_pr_curve
+
 
 def prediction_pipeline(
     tickers: list,
@@ -88,9 +95,14 @@ def prediction_pipeline(
     # Step 4: Sort by peak2_date to prevent leakage
     labeled_data = labeled_data.sort_values(by='peak2_date', ascending=True).reset_index(drop=True)
 
-    # Step 5: train/test split based on date
+    # Step 5: Take out testing set (last 20% of data by date)
+    split_index = int(len(labeled_data) * 0.8)
+    train_data = labeled_data.iloc[:split_index]
+    test_data = labeled_data.iloc[split_index:]
+
+    # Step 6: train/test split based on date
         # Would prefer to use PurgedGroupTimeSeriesSplit from mlfinlab as found in quant research
-        # However, this package is not compatible with Python 3.12, so I implemented a basic time-based split here
+        # However, this package is not compatible with Python 3.12, so I implemented a basic time-based split
         # Source: López de Prado (2018), Advances in Financial Machine Learning, Chapter 7: Purged K-Fold CV (Wiley).
 
     features = ['peak1_price', 'peak2_price', 'trough_price', 'peak_gap_days', 'vol1',
@@ -98,36 +110,49 @@ def prediction_pipeline(
                 'retracement_depth1', 'retracement_depth2', 'volume_diff', 
                 'peak1_to_trough', 'trough_to_peak2']
     
-    X = labeled_data[features]
-    y = labeled_data['label']
-    times = labeled_data["peak2_date"]
+    X_train = train_data[features]
+    y_train = train_data['label']
 
     splitter = WalkForwardSplit(n_splits=5)
 
     model = XGBClassifier(
-        n_estimators=300,
-        max_depth=4,
-        learning_rate=0.05,
-        subsample=0.8,
-        colsample_bytree=0.8,
         objective="binary:logistic",
         n_jobs=-1,
     )
 
-    fold_scores = []
+    param_distributions = {
+        "n_estimators": [200, 400, 800],
+        "learning_rate": [0.01, 0.05, 0.1],
+        "max_depth": [2, 3, 4, 5],
+        "min_child_weight": [1, 5, 10],
+        "subsample": [0.6, 0.8, 1.0],
+        "colsample_bytree": [0.6, 0.8, 1.0],
+        "gamma": [0, 0.5, 1.0],
+        "reg_lambda": [1, 5, 10],
+        "reg_alpha": [0, 0.1, 1.0],
+    }
 
-    for fold, (train_idx, test_idx) in enumerate(splitter.split(X, times=times), start=1):
-        X_train, X_test = X.iloc[train_idx], X.iloc[test_idx]
-        y_train, y_test = y.iloc[train_idx], y.iloc[test_idx]
+    search = RandomizedSearchCV(
+        estimator=model,
+        param_distributions=param_distributions,
+        n_iter=50,
+        scoring="roc_auc",
+        cv=splitter,
+        n_jobs=-1,
+        refit=True
+    )
 
-        model.fit(X_train, y_train)
-        score = model.score(X_test, y_test)
-        fold_scores.append(score)
+    best_model = search.fit(X_train, y_train).best_estimator_
 
-        print(f"Fold {fold}: score = {score:.4f}")
-
-    print("Mean CV score:", sum(fold_scores) / len(fold_scores))
+    X_eval = test_data[features]
+    y_eval = test_data['label']
     
+    print('found best model')
+    evaluate_classifier(best_model, X_train, y_train, X_eval, y_eval)
+
+    # plot_roc_curve(y, model.predict_proba(X)[:, 1])
+    # plot_pr_curve(y, model.predict_proba(X)[:, 1])
+
     return labeled_data
 
 if __name__ == "__main__":
@@ -141,6 +166,12 @@ if __name__ == "__main__":
     # tickers = tickers[:10]  # limit to first 10 tickers for testing
     
     labeled_data = prediction_pipeline(tickers)
+
+    
+
+
+
+
 
     
 
