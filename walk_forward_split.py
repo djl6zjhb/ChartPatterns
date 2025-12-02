@@ -20,15 +20,16 @@ class WalkForwardSplit:
         it's inferred.
     """
 
-    def __init__(self, n_splits=5, test_size=None, min_train_size=None):
+    def __init__(self, n_splits=5, test_size=None, min_train_size=None, times=None):
         self.n_splits = n_splits
         self.test_size = test_size
         self.min_train_size = min_train_size
+        self.times = times
 
     def get_n_splits(self, X=None, y=None, groups=None):
         return self.n_splits
 
-    def split(self, X, y=None, times=None, groups=None):
+    def split(self, X, y=None, groups=None):
         """
         Generate indices for train/test for each fold.
 
@@ -43,7 +44,7 @@ class WalkForwardSplit:
         train_idx, test_idx : np.ndarray
             Arrays of integer indices into X.
         """
-        if times is None:
+        if self.times is None:
             raise ValueError("times must be provided for WalkForwardSplit")
 
         times = np.asarray(times)
