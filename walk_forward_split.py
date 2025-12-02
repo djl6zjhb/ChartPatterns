@@ -47,7 +47,7 @@ class WalkForwardSplit:
         if self.times is None:
             raise ValueError("times must be provided for WalkForwardSplit")
 
-        times = np.asarray(times)
+        times = np.asarray(self.times)
         n_samples = len(times)
 
         # Sort by time

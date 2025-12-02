@@ -111,7 +111,7 @@ def prediction_pipeline(
     y_train = train_data['label']
     times = train_data['peak2_date']
 
-    splitter = WalkForwardSplit(n_splits=5, times=times, groups=None)
+    splitter = WalkForwardSplit(n_splits=5, times=times)
 
     model = XGBClassifier(
         objective="binary:logistic",
@@ -140,7 +140,7 @@ def prediction_pipeline(
         refit=True
     )
 
-    best_model = search.fit(X_train, y_train, times=times).best_estimator_
+    best_model = search.fit(X_train, y_train).best_estimator_
 
     X_eval = test_data[features]
     y_eval = test_data['label']
