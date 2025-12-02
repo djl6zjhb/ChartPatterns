@@ -123,11 +123,12 @@ def prediction_pipeline(
         model.fit(X_train, y_train)
         score = model.score(X_test, y_test)
         fold_scores.append(score)
+
         print(f"Fold {fold}: score = {score:.4f}")
 
     print("Mean CV score:", sum(fold_scores) / len(fold_scores))
     
-    # return labeled_data
+    return labeled_data
 
 if __name__ == "__main__":
     directory = "./sp500/sp500"
@@ -140,9 +141,7 @@ if __name__ == "__main__":
     # tickers = tickers[:10]  # limit to first 10 tickers for testing
     
     labeled_data = prediction_pipeline(tickers)
-    labeled_data = labeled_data.drop(labels=['peak1_pos', 'trough_pos', 'peak2_pos', 'trough_date','peak2_date'], axis=1)
-    # print(labeled_data.sort_values(by='peak1_date', ascending=True))
-    # print(labeled_data['label'].value_counts())
+
     
 
 
