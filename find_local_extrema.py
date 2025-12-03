@@ -1,4 +1,7 @@
-import pandas as pd
+# This module was heavily edited with ChatGPT
+# My original attempt at this function was very inefficient
+# This is significantly optimized, and given the amount of times it runs in my pipeline,
+# I wanted to ensure it was as fast as possible.
 
 def find_local_extrema(df, window=3):
     """
