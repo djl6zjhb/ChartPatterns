@@ -2,8 +2,16 @@ import pandas as pd
 
 def confirm_double_tops(df, events_df, max_confirm_days=20):
     """
-    For each candidate double top, look for first close below trough (neckline)
-    after the second peak. That date is confirmation_date.
+    Confirmation of candidate double tops by observing future close below trough.
+
+    Parameters
+    ----------
+    df : pd.DataFrame
+        DataFrame containing stock price data for a single ticker from 2015-01-02 to 2024-12-30.
+    events_df : pd.DataFrame
+        DataFrame of candidate double top events detected by `detect_double_tops`.
+    max_confirm_days : int, optional
+        Maximum number of days after the second peak to look for confirmation (default is 20).
     """
     confirmed = []
 
