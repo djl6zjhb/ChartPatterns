@@ -33,7 +33,7 @@ def detect_double_tops(
     require_lower_second_vol : bool, optional
         Whether to require the second peak's volume to be lower than the first (default is True).
     """
-    
+
     local_high, local_low = find_local_extrema(df, window=peak_window)
     
     peaks = df[local_high].copy()
@@ -51,6 +51,8 @@ def detect_double_tops(
         max_date = t1 + max_peak_gap
 
         candidate_peaks2 = peaks[(peaks.index >= min_date) & (peaks.index <= max_date)]
+        
+        # edge case for no candidate second peaks, like for the last peak in the data
         if candidate_peaks2.empty:
             continue
 
@@ -75,12 +77,13 @@ def detect_double_tops(
             if (avg_peak - trough_price) / avg_peak < min_trough_drop:
                 continue
 
-            # volume condition (second peak volume < first)
+            # second peak trading volume must be lower than first
             vol1 = p1['Volume']
             vol2 = p2['Volume']
             if require_lower_second_vol and not (vol2 < vol1):
                 continue
 
+            # add to return df
             events.append({
                 'peak1_date': t1,
                 'peak2_date': t2,
