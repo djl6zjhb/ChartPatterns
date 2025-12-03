@@ -3,7 +3,6 @@
 
 import pandas as pd
 import os
-from add_to_full_summary import add_to_full_summary
 from detect_double_tops import detect_double_tops
 from confirm_double_tops import confirm_double_tops
 from compute_forward_returns import compute_forward_returns
@@ -104,24 +103,28 @@ def run_double_top_pipeline(
     ma_events["symbol"] = ticker
 
     # 5) summary statistics
-    summary_df = evaluate_all(dt_events, rand_events, ma_events, horizons=horizons)
-    summary_df["symbol"] = ticker
-    print(f"Summary for {ticker}:\n{summary_df}")
-    full_summary = add_to_full_summary(full_summary, summary_df)
+    ind_return_summary_df, comp_return_summary_df = evaluate_all(dt_events, rand_events, ma_events, horizons=horizons)
+    ind_return_summary_df["symbol"] = ticker
+    comp_return_summary_df["symbol"] = ticker
+    # print(f"Summary for {ticker}:\n{summary_df}")
 
     # 6) CSVs
     if save_prefix is not None:
         dt_events.to_csv(f"{save_prefix}_events.csv", index=False)
-        summary_df.to_csv(f"{save_prefix}_summary.csv", index=False)
-        print(f"Saved events to {save_prefix}_events.csv and summary to {save_prefix}_summary.csv")
+        ind_return_summary_df.to_csv(f"{save_prefix}_summary.csv", index=False)
+        comp_return_summary_df.to_csv(f"{save_prefix}_comparison_summary.csv", index=False)
+        # print(f"Saved events to {save_prefix}_events.csv and summary to {save_prefix}_summary.csv")
 
     # 7) plots
     if make_plots:
         mid_h = horizons[len(horizons) // 2]
         plot_return_distributions(dt_events, rand_events, ma_events, ticker=ticker, horizon=mid_h)
         # plot_parameter_heatmap(dt_events, ticker=ticker, horizon=mid_h)
+    
+    # 8) compile full summary of events across all tickers
+    full_summary = pd.concat([full_summary, ind_return_summary_df], ignore_index=True)
 
-    return dt_events, dt_candidates, rand_events, ma_events, summary_df, full_summary
+    return dt_events, dt_candidates, rand_events, ma_events, ind_return_summary_df, full_summary
 
 
 if __name__ == "__main__":
@@ -132,17 +135,21 @@ if __name__ == "__main__":
     summary_df = None
 
     root_path = './sp500/sp500/'
-    full_summary = pd.DataFrame(columns=['5-day success','5-day return','5-day p-value','5-day hit ratio','5-day sharpe','5-day cohen d',
-                                         '20-day success','20-day return','20-day p-value','20-day hit ratio','20-day sharpe','20-day cohen d',
-                                         '60-day success','60-day return','60-day p-value','60-day hit ratio','60-day sharpe','60-day cohen d'])
+    full_summary = pd.DataFrame()
 
     for current_dir, subdirs, files in os.walk(root_path):
         for fname in files:
             symbol = fname.split('.')[0]
-            dt_events, dt_candidates, rand_events, ma_events, summary_df, full_summary = run_double_top_pipeline(symbol, save_prefix=f'{symbol}', make_plots=True, full_summary=full_summary)
+            
+            print(f"Processing {symbol}...")
+            # use when processing all files
+            dt_events, dt_candidates, rand_events, ma_events, summary_df, full_summary = run_double_top_pipeline(symbol, full_summary=full_summary)
+            
+            # use when making images or saving example files
+            # dt_events, dt_candidates, rand_events, ma_events, summary_df, full_summary = run_double_top_pipeline(symbol, save_prefix=f'{symbol}', make_plots=True, full_summary=full_summary)
             break  # only process the first file in this directory
         break  # stop after the top-level directory iteration
     
     dt_candidates = label_events(dt_candidates, dt_events)
 
-    # full_summary.to_csv('double_top_events_all.csv', index=True)
+    full_summary.to_csv('all_returns_all_horizons.csv', index=True)
