@@ -11,6 +11,7 @@ def plot_candles(
     volume=True,
     mav=None,
     date_range=None,
+    fig_size=(8, 4),
     save_path=None,
 ):
     """
@@ -40,6 +41,9 @@ def plot_candles(
 
     date_range : tuple(str or Timestamp, str or Timestamp) or None
         Optional (start, end) to zoom, e.g. ('2020-01-01', '2021-01-01').
+    
+    fig_size : tuple(int, int)
+        Figure size in inches (width, height).
 
     save_path : str or None
         If provided, saves the figure to this path.
@@ -169,9 +173,9 @@ def plot_candles(
         style="yahoo",
         title=title,
         volume=volume,
-        mav=mav,
+        mav=mav if mav is not None else (),
         addplot=apds,
-        figsize=(24, 12),
+        figsize=fig_size,
         tight_layout=True,
         savefig=save_path,
         warn_too_much_data=1000000000
@@ -210,7 +214,5 @@ if __name__ == "__main__":
                 skiprows=[1]
     )
     dt_events, rand_events, ma_events, summary_df, text_summary, full_summary = run_double_top_pipeline('AAPL',full_summary=full_summary)
-    plot_candles(df_aapl, dt_events, title="AAPL Candles", mav=(20,50), save_path="aapl_chart.png")
-
-    dt_events, rand_events, ma_events, summary_df, text_summary, full_summary = run_double_top_pipeline('SBAC',full_summary=full_summary)
-    plot_candles(df_solv, dt_events, title="SBAC Candles", mav=(20,50), save_path="SOLV_chart.png")
+    # plot_candles(df_aapl, dt_events, title="AAPL Candles", mav=(20,50), fig_size=(12, 6), save_path="aapl_chart.png")
+    plot_candles(df_aapl, dt_events, title="AAPL Candles", mav=None, date_range=('2020-Dec-16', '2021-Jun-16'), save_path="aapl_chart_zoomed.png")
