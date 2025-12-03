@@ -31,10 +31,6 @@ def evaluate_classifier(model, X_train, y_train, X_test, y_test, threshold=0.5,)
 
     threshold : 
         Probability threshold for classification
-
-    Returns
-    -------
-    results : dictionary of classifer evaluation results
     """
 
     y_true_all = []
@@ -48,7 +44,7 @@ def evaluate_classifier(model, X_train, y_train, X_test, y_test, threshold=0.5,)
     probs = model.predict_proba(X_test)[:, 1]
     preds = (probs >= threshold).astype(int)
 
-    # Compute metrics for this fold
+    # Compute metrics for classifier
     results = {}
 
     results["accuracy"] = accuracy_score(y_test, preds)
