@@ -3,7 +3,18 @@ from summarize_returns import summarize_returns
 
 def evaluate_all(events_dt, events_rand, events_ma, horizons=(5, 20, 60)):
     """
-    Build a summary DataFrame over horizons and event types.
+    Build a summary DataFrame for a single ticker over horizons and event types.
+
+    Parameters
+    ----------
+    events_dt : pd.DataFrame
+        DataFrame of double-top events with forward returns.
+    events_rand : pd.DataFrame
+        DataFrame of random baseline events with forward returns.
+    events_ma : pd.DataFrame
+        DataFrame of moving-average crossover baseline events with forward returns.
+    horizons : tuple of int
+        Forward-return horizons in trading days (default is (5, 20, 60))
     """
     records = []
     for h in horizons:
