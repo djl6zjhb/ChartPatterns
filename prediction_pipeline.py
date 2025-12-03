@@ -71,7 +71,7 @@ def prediction_pipeline(
 
         labeled_data = pd.concat([labeled_data, all_events])
 
-    # Step 3: feature engineering (placeholder - implement as needed)
+    # Step 3: feature engineering 
     # Peak Height Difference (raw and pct)
     labeled_data['peak_height_diff'] = labeled_data['peak2_price'] - labeled_data['peak1_price']
     labeled_data['peak_height_diff_pct'] = labeled_data['peak_height_diff'] / labeled_data['peak1_price']
@@ -87,7 +87,7 @@ def prediction_pipeline(
     labeled_data['peak1_to_trough'] = (labeled_data['trough_pos'] - labeled_data['peak1_pos'])
     labeled_data['trough_to_peak2'] = (labeled_data['peak2_pos'] - labeled_data['trough_pos'])
     
-    # Momentum Indicators (need to add to initial dataset; implement if needed later)
+    # Momentum Indicators (need to add to initial dataset;opportunity for future improvement)
 
     # Step 4: Sort by peak2_date to prevent leakage
     labeled_data = labeled_data.sort_values(by='peak2_date', ascending=True).reset_index(drop=True)
