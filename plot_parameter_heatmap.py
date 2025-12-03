@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-def plot_parameter_heatmap(dt_events, horizon=20, gap_bins=[15,20,25,30], vol_bins=[0.0,0.5,0.8,1.0]):
+def plot_parameter_heatmap(dt_events, ticker,horizon=20, gap_bins=[15,20,25,30], vol_bins=[0.0,0.5,0.8,1.0]):
     col = f'ret_{horizon}d'
     data = dt_events.dropna(subset=[col]).copy()
     data['gap_bin'] = pd.cut(data['peak_gap_days'], bins=gap_bins, include_lowest=True)
@@ -19,3 +19,4 @@ def plot_parameter_heatmap(dt_events, horizon=20, gap_bins=[15,20,25,30], vol_bi
     plt.title('Double top parameter “heatmap”')
     plt.tight_layout()
     plt.show()
+    plt.savefig(f"{ticker}_parameter_heatmap.png", dpi=300, bbox_inches='tight')
