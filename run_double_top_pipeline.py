@@ -121,7 +121,7 @@ def run_double_top_pipeline(
         summary_df.to_csv(f"{save_prefix}_summary.csv", index=False)
         print(f"Saved events to {save_prefix}_events.csv and summary to {save_prefix}_summary.csv")
 
-    # 7) plots (optional)
+    # 7) plots
     if make_plots:
         # choose the middle horizon for prettier plots if available
         mid_h = horizons[len(horizons) // 2]
@@ -160,13 +160,10 @@ if __name__ == "__main__":
         for fname in files:
             symbol = fname.split('.')[0]
             print(symbol)
-            dt_events, dt_candidates, rand_events, ma_events, summary_df, text_summary, full_summary = run_double_top_pipeline(symbol, full_summary=full_summary)
+            dt_events, dt_candidates, rand_events, ma_events, summary_df, text_summary, full_summary = run_double_top_pipeline(symbol, save_prefix=f'{symbol}', full_summary=full_summary)
             break  # only process the first file in this directory
         break  # stop after the top-level directory iteration
     
-    print(dt_events)
-    print(dt_candidates)
     dt_candidates = label_events(dt_candidates, dt_events)
-    print(dt_candidates)
 
     # full_summary.to_csv('double_top_events_all.csv', index=True)
