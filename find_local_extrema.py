@@ -6,6 +6,13 @@
 def find_local_extrema(df, window=3):
     """
     Identify local max and mins in the 'High' and 'Low' columns of df.
+
+    Parameters
+    ----------
+    df : pd.DataFrame
+        DataFrame containing stock price data for a single ticker.
+    window : int, optional
+        Window size for detecting local peaks and troughs (default is 3). Measured in days.
     """
     highs = df['High']
     lows = df['Low']
