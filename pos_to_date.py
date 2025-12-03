@@ -4,6 +4,15 @@ def pos_to_date(df, dt_events, confirm_pos=True) -> pd.DataFrame:
     """
     Convert position-based indices in events_df to actual dates from df index.
     Assumes events_df has a 'position' column with integer positions.
+
+    Parameters
+    ----------
+    df : pd.DataFrame
+        DataFrame of stock price data with dates represented by string index.
+    dt_events : pd.DataFrame
+        DataFrame containing double top events with position indices.
+    confirm_pos : bool, optional
+        Whether to convert the 'confirm_pos' column to dates (default is True, would be false if column did not exist).
     """
     df = df.reset_index()
     dates = df.Date
