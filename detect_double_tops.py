@@ -68,7 +68,7 @@ def detect_double_tops(
             mid_troughs = troughs[(troughs.index > t1) & (troughs.index < t2)]
             if mid_troughs.empty:
                 continue
-
+            
             trough_date = mid_troughs['Low'].idxmin()
             trough_price = mid_troughs.loc[trough_date, 'Low']
 
@@ -84,6 +84,7 @@ def detect_double_tops(
                 continue
 
             # add to return df
+            # all dates saved as index rather than actual date; relevant in later functions
             events.append({
                 'peak1_date': t1,
                 'peak2_date': t2,
