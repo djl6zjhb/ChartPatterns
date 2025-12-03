@@ -1,12 +1,17 @@
 import numpy as np
 from scipy import stats
-from compute_forward_returns import compute_forward_returns
 
 def summarize_returns(ret_series):
     """
-    ret_series: pandas Series of returns for a given horizon.
+    Calculates summary statistics for the summary dataframe with forward returns.
+
+    Parameters
+    ----------
+    ret_series: pd.Series
+        Series of returns for a given horizon.
     """
     ret = ret_series.dropna()
+
     if len(ret) < 5:
         return {
             'n': len(ret),
