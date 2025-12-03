@@ -5,16 +5,35 @@ from find_local_extrema import find_local_extrema
 def detect_double_tops(
     df,
     peak_window=3,
-    peak_tolerance=0.01,     # peaks must be within 1%
+    peak_tolerance=0.01,   
     min_peak_gap=15,
     max_peak_gap=30,
-    min_trough_drop=0.03,    # trough must be at least 3% below peaks
+    min_trough_drop=0.03,
     require_lower_second_vol=True
 ):
     """
-    Detect double top patterns and return a DataFrame of pattern events
-    *before confirmation* (confirmation checked separately).
+    Detect candidate double top patterns and return a DataFrame of pattern events.
+    Confirmation of patterns by observing future close below trough done in a separate function.
+
+    Parameters
+    ----------
+    df : pd.DataFrame
+        DataFrame containing stock price data for a single ticker from 2015-01-02 to 2024-12-30.
+        Columns: 'Date', 'Open', 'Close', 'High', 'Low', and 'Volume'.
+    peak_window : int, optional
+        Window size for detecting local peaks and troughs (default is 3). Measured in days.
+    peak_tolerance : float, optional
+        Maximum allowed relative difference between the two peaks to consider them similar (default is 0.01).
+    min_peak_gap : int, optional
+        Minimum number of days between the two peaks (default is 15).
+    max_peak_gap : int, optional
+        Maximum number of days between the two peaks (default is 30).
+    min_trough_drop : float, optional
+        Minimum relative drop of the trough compared to the peaks (default is 0.03).
+    require_lower_second_vol : bool, optional
+        Whether to require the second peak's volume to be lower than the first (default is True).
     """
+    
     local_high, local_low = find_local_extrema(df, window=peak_window)
     
     peaks = df[local_high].copy()
