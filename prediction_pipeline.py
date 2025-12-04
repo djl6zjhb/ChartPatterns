@@ -7,6 +7,7 @@ from pos_to_date import pos_to_date
 from label_events import label_events
 from xgboost import XGBClassifier
 from sklearn.model_selection import RandomizedSearchCV
+import joblib
 
 from walk_forward_split import WalkForwardSplit
 from evaluate_classifier import evaluate_classifier
@@ -151,7 +152,7 @@ def prediction_pipeline(
     # plot_roc_curve(y, model.predict_proba(X)[:, 1])
     # plot_pr_curve(y, model.predict_proba(X)[:, 1])
 
-    return labeled_data
+    return labeled_data, best_model
 
 if __name__ == "__main__":
     directory = "./sp500/sp500"
@@ -163,7 +164,17 @@ if __name__ == "__main__":
 
     # tickers = tickers[:10]  # limit to first 10 tickers for testing
     
-    labeled_data = prediction_pipeline(tickers)
+    labeled_data, best_model = prediction_pipeline(tickers)
+
+    features = ['peak1_price', 'peak2_price', 'trough_price', 'peak_gap_days', 'vol1',
+                'vol2', 'vol2_vol1_ratio', 'peak_height_diff', 'peak_height_diff_pct', 
+                'retracement_depth1', 'retracement_depth2', 'volume_diff', 
+                'peak1_to_trough', 'trough_to_peak2']
+    
+    # save the best model
+    best_model.save_model('best_xgb_model.json')
+    joblib.dump(features, 'feature_names.pkl')
+    labeled_data.to_csv('labeled_double_top_events.csv', index=False)
 
     
 
