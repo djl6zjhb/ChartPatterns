@@ -1,7 +1,7 @@
 import pandas as pd
 import altair as alt
 
-def comparative_return_analysis(filename: str, image_name: str):
+def comparative_return_analysis(filename: str):
     """
     Using the cross-event analysis generated from run_double_top_pipeline,
     analyze and compare the return statistics across event types and horizons.
@@ -10,41 +10,61 @@ def comparative_return_analysis(filename: str, image_name: str):
     ----------
     filename : str
         Path to the CSV file containing the comparative return statistics.
-    image_name : str
-        Name of the image file to save the plot.
     """
     alt.renderers.enable('default')
 
-    df = pd.read_csv(filename, index_col=0)
-    fived_df = df[df['horizon'] == 5]
-    twentyd_df = df[df['horizon'] == 20]
-    sixtyd_df = df[df['horizon'] == 60]
+    data = pd.read_csv(filename, index_col=0)
+    fived_df = data[data['horizon'] == 5]
+    twentyd_df = data[data['horizon'] == 20]
+    sixtyd_df = data[data['horizon'] == 60]
 
-    print(fived_df.head())
+    dfs = [(fived_df,5,'#0000FF'), (twentyd_df,20,'#FF0000'), (sixtyd_df,60,'#008000')]
 
-    # plotting p-value distributions
-    base = alt.Chart(sixtyd_df).mark_bar(opacity=0.8).encode(
-        x=alt.X('mw_p:Q',
-                bin=alt.Bin(maxbins=20),
-                title='Mann-Whitney p-value'),
-        y=alt.Y('count()',
-                title='Number of tickers')
-    ).properties(
-        width=180,
-        height=150
-    )
+    plots = []
 
-    chart = base.facet(
-        column=alt.Column('comparison:N', title=None)
-    ).properties(
-        title=f'Mann-Whitney p-value distributions by comparison (horizon=60)'
-    )
+    for tup in dfs: 
+        # plotting p-value distributions
+        base = alt.Chart(tup[0]).mark_bar(opacity=0.5, color=tup[2]).encode(
+            x=alt.X('mw_p:Q',
+                    bin=alt.Bin(maxbins=20),
+                    title='Mann-Whitney p-value'),
+            y=alt.Y('count()',
+                    title='Number of tickers')
+        ).properties(
+            width=240,
+            height=150
+        )
 
-    chart.save(image_name)
+        chart = base.facet(
+            column=alt.Column('comparison:N', title=None)
+        ).properties(
+            title=alt.TitleParams(
+                text=f'horizon = {tup[1]} day returns',
+                offset=5
+            )
+        )
 
+        plots.append(chart)
+    
+    combined = alt.vconcat(
+        plots[0],
+        plots[1],
+        plots[2],
+        spacing=15
+        ).resolve_scale(
+            x='shared'
+        ).properties(
+            title = alt.TitleParams(
+                text='Mann-Whitney p-value distributions across comparison groups',
+                anchor='middle',
+                fontSize=18,
+                offset=10
+            )
+        ).configure_bar(binSpacing = 0)
 
-    # print(df)
+    combined.save('predicted_return_pval_hist.html')
+
 
 if __name__ == "__main__":
-    comparative_return_analysis('comp_returns_all_horizons.csv', 'comp_return_pvalue_h60.html')
+    comparative_return_analysis('comp_returns_all_horizons.csv')
     # comparative_return_analysis('pred_comp_full_summary.csv', 'pred_comp_return_pvalue_h5.html')
