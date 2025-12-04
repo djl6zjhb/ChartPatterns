@@ -19,7 +19,8 @@ def run_double_top_pipeline(
     double_top_params: dict = {},
     save_prefix: str | None = None,
     make_plots: bool = False,
-    full_summary: pd.DataFrame = pd.DataFrame()
+    ind_full_summary: pd.DataFrame = pd.DataFrame(),
+    comp_full_summary: pd.DataFrame = pd.DataFrame()
 ):
     """
     End-to-end pipeline to test Double Top performance for one ticker.
@@ -37,31 +38,35 @@ def run_double_top_pipeline(
     ----------
     ticker : str
         Ticker symbol, e.g. "SPY", "AAPL".
-    start : str
-        Start date for data (YYYY-MM-DD).
-    end : str
-        End date for data (YYYY-MM-DD).
     horizons : tuple of int
         Forward-return horizons in trading days.
+    double_top_params : dict
+        Parameters to adjust double top detection settings.
     save_prefix : str or None
         If not None, will save:
             {save_prefix}_events.csv
             {save_prefix}_summary.csv
     make_plots : bool
         If True, will show a distribution plot and a simple parameter heatmap.
+    ind_full_summary : pd.DataFrame
+        DataFrame to append individual summary statistics across tickers.
+    comp_full_summary : pd.DataFrame
+        DataFrame to append comparison summary statistics across tickers.
 
     Returns
     -------
     dt_events : pd.DataFrame
         Double-top events with features + forward returns.
+    dt_candidates : pd.DataFrame
+        Candidate double-top events before confirmation.
     rand_events : pd.DataFrame
         Random baseline events with forward returns.
     ma_events : pd.DataFrame
         Moving-average crossover baseline events.
-    summary_df : pd.DataFrame
-        Summary statistics across horizons & event types.
-    text_summary_20d : str
-        Plain-language summary at the 20-day horizon (if available).
+    ind_return_summary_df : pd.DataFrame
+        Individual summary statistics across horizons & event types.
+    comp_return_summary_df : pd.DataFrame
+        Comparison summary statistics across horizons & event types.
     """
 
     # 1) pull data from local files
@@ -87,8 +92,8 @@ def run_double_top_pipeline(
         dt_events = pd.DataFrame()
         rand_events = pd.DataFrame()
         ma_events = pd.DataFrame()
-        summary_df = pd.DataFrame()
-        return dt_events, dt_candidates, rand_events, ma_events, summary_df, full_summary
+        ind_return_summary_df, comp_return_summary_df = pd.DataFrame(), pd.DataFrame()
+        return dt_events, dt_candidates, rand_events, ma_events, ind_return_summary_df, comp_return_summary_df
 
     # 3) forward returns for double-top events
     dt_events = compute_forward_returns(df, dt_confirmed, horizons=horizons)
@@ -106,7 +111,6 @@ def run_double_top_pipeline(
     ind_return_summary_df, comp_return_summary_df = evaluate_all(dt_events, rand_events, ma_events, horizons=horizons)
     ind_return_summary_df["symbol"] = ticker
     comp_return_summary_df["symbol"] = ticker
-    # print(f"Summary for {ticker}:\n{summary_df}")
 
     # 6) CSVs
     if save_prefix is not None:
@@ -122,9 +126,10 @@ def run_double_top_pipeline(
         # plot_parameter_heatmap(dt_events, ticker=ticker, horizon=mid_h)
     
     # 8) compile full summary of events across all tickers
-    full_summary = pd.concat([full_summary, ind_return_summary_df], ignore_index=True)
+    ind_full_summary = pd.concat([ind_full_summary, ind_return_summary_df], ignore_index=True)
+    comp_full_summary = pd.concat([comp_full_summary, comp_return_summary_df], ignore_index=True)
 
-    return dt_events, dt_candidates, rand_events, ma_events, ind_return_summary_df, full_summary
+    return dt_events, dt_candidates, rand_events, ma_events, ind_return_summary_df, comp_full_summary
 
 
 if __name__ == "__main__":
@@ -135,7 +140,9 @@ if __name__ == "__main__":
     summary_df = None
 
     root_path = './sp500/sp500/'
-    full_summary = pd.DataFrame()
+
+    ind_return_summary_df = pd.DataFrame()
+    comp_return_summary_df = pd.DataFrame()
 
     for current_dir, subdirs, files in os.walk(root_path):
         for fname in files:
@@ -143,13 +150,14 @@ if __name__ == "__main__":
             
             print(f"Processing {symbol}...")
             # use when processing all files
-            dt_events, dt_candidates, rand_events, ma_events, summary_df, full_summary = run_double_top_pipeline(symbol, full_summary=full_summary)
-            
+            dt_events, dt_candidates, rand_events, ma_events, ind_return_summary_df, comp_return_summary_df = run_double_top_pipeline(symbol, ind_full_summary=ind_return_summary_df, comp_full_summary=comp_return_summary_df)
+
             # use when making images or saving example files
-            # dt_events, dt_candidates, rand_events, ma_events, summary_df, full_summary = run_double_top_pipeline(symbol, save_prefix=f'{symbol}', make_plots=True, full_summary=full_summary)
-            break  # only process the first file in this directory
-        break  # stop after the top-level directory iteration
+            # dt_events, dt_candidates, rand_events, ma_events, summary_df, full_summary = run_double_top_pipeline(symbol, save_prefix=f'{symbol}', make_plots=True)
+            # break  # only process the first file in this directory
+        # break  # stop after the top-level directory iteration
     
     dt_candidates = label_events(dt_candidates, dt_events)
 
-    full_summary.to_csv('all_returns_all_horizons.csv', index=True)
+    ind_return_summary_df.to_csv('ind_returns_all_horizons.csv', index=True)
+    comp_return_summary_df.to_csv('comp_returns_all_horizons.csv', index=True)
