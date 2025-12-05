@@ -11,6 +11,7 @@ import joblib
 
 from walk_forward_split import WalkForwardSplit
 from evaluate_classifier import evaluate_classifier
+from permutation_test_all_metrics import permutation_test_all_metrics
 
 
 def prediction_pipeline(
@@ -145,14 +146,17 @@ def prediction_pipeline(
 
     X_eval = test_data[features]
     y_eval = test_data['label']
+
+    metrics_real, metrics_null, p_values = permutation_test_all_metrics(best_model, X_train, y_train, X_eval, y_eval)
     
-    print('found best model')
-    evaluate_classifier(best_model, X_train, y_train, X_eval, y_eval)
+    results = evaluate_classifier(best_model, X_train, y_train, X_eval, y_eval)
+
+    print(p_values)
 
     # plot_roc_curve(y, model.predict_proba(X)[:, 1])
     # plot_pr_curve(y, model.predict_proba(X)[:, 1])
 
-    return labeled_data, best_model
+    return labeled_data, best_model, results
 
 if __name__ == "__main__":
     directory = "./sp500/sp500"
@@ -164,12 +168,14 @@ if __name__ == "__main__":
 
     # tickers = tickers[:10]  # limit to first 10 tickers for testing
     
-    labeled_data, best_model = prediction_pipeline(tickers)
+    labeled_data, best_model, results = prediction_pipeline(tickers)
 
     features = ['peak1_price', 'peak2_price', 'trough_price', 'peak_gap_days', 'vol1',
                 'vol2', 'vol2_vol1_ratio', 'peak_height_diff', 'peak_height_diff_pct', 
                 'retracement_depth1', 'retracement_depth2', 'volume_diff', 
                 'peak1_to_trough', 'trough_to_peak2']
+    
+    # print(results)
     
     # save the best model
     best_model.save_model('best_xgb_model.json')
