@@ -1,7 +1,7 @@
 import pandas as pd
 import altair as alt
 
-def comparative_return_analysis(filename: str):
+def comparative_return_analysis(filename: str, image_name:str):
     """
     Using the cross-event analysis generated from run_double_top_pipeline,
     analyze and compare the return statistics across event types and horizons.
@@ -21,6 +21,8 @@ def comparative_return_analysis(filename: str):
     dfs = [(fived_df,5,'#0000FF'), (twentyd_df,20,'#FF0000'), (sixtyd_df,60,'#008000')]
 
     plots = []
+
+    d = 'Confirmed Double Tops' if 'pred' not in filename else 'Predicted Double Tops'
 
     for tup in dfs: 
         # plotting p-value distributions
@@ -55,16 +57,24 @@ def comparative_return_analysis(filename: str):
             x='shared'
         ).properties(
             title = alt.TitleParams(
-                text='Mann-Whitney p-value distributions across comparison groups',
+                text=f'Mann-Whitney p-value distributions across comparison groups: {d}',
                 anchor='middle',
                 fontSize=18,
                 offset=10
             )
         ).configure_bar(binSpacing = 0)
 
-    combined.save('predicted_return_pval_hist.html')
+    combined.save(image_name)
 
 
 if __name__ == "__main__":
-    comparative_return_analysis('comp_returns_all_horizons.csv')
-    # comparative_return_analysis('pred_comp_full_summary.csv', 'pred_comp_return_pvalue_h5.html')
+    # df1 = pd.read_csv('comp_returns_all_horizons.csv')
+    # df2 = pd.read_csv('pred_comp_full_summary.csv')
+
+    # print(len(df1))
+    # print(len(df2))
+
+    # print(df1.head())
+    # print(df2.head())
+    comparative_return_analysis('comp_returns_all_horizons.csv','confirmed_return_pval_hist.html')
+    comparative_return_analysis('pred_comp_full_summary.csv','predicted_return_pval_hist.html')
