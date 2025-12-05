@@ -90,7 +90,8 @@ def permutation_test_all_metrics(
 
         p_values[name] = p
 
-    p_values = {k: float(v) for k, v in p_values.items()}
+    # Preventing hard zero for p-values
+    p_values = {k: ((float(v) + 1) / (n_permutations + 1))  for k, v in p_values.items()}
 
 
     return metrics_real, metrics_null, p_values

@@ -175,7 +175,7 @@ if __name__ == "__main__":
                 'retracement_depth1', 'retracement_depth2', 'volume_diff', 
                 'peak1_to_trough', 'trough_to_peak2']
     
-    # print(results)
+    print(results)
     
     # save the best model
     best_model.save_model('best_xgb_model.json')
