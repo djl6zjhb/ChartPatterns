@@ -1,3 +1,5 @@
+# ChatGPT generated code blcok to compare independent series
+ 
 import numpy as np
 from scipy.stats import mannwhitneyu, ks_2samp, ttest_ind
 

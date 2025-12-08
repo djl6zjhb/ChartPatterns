@@ -22,21 +22,13 @@ def evaluate_classifier(model, X_train, y_train, X_test, y_test, threshold=0.5,)
     ----------
     model: XGBoost estimator
         The classifier model to be evaluated.
-
     X_train, y_train : pd.DataFrame, pd.Series
         Feature matrix and labels for training.
-
     X_test, y_test : pd.DataFrame, pd.Series
         Feature matrix and labels for testing.
-
     threshold : 
         Probability threshold for classification
     """
-
-    y_true_all = []
-    probs_all = []
-    preds_all = []
-    fold_ids = []
 
     model.fit(X_train, y_train)
 

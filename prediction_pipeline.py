@@ -89,7 +89,7 @@ def prediction_pipeline(
     labeled_data['peak1_to_trough'] = (labeled_data['trough_pos'] - labeled_data['peak1_pos'])
     labeled_data['trough_to_peak2'] = (labeled_data['peak2_pos'] - labeled_data['trough_pos'])
     
-    # Momentum Indicators (need to add to initial dataset;opportunity for future improvement)
+    # Momentum Indicators (need to add to initial dataset; opportunity for future improvement)
 
     # Step 4: Sort by peak2_date to prevent leakage
     labeled_data = labeled_data.sort_values(by='peak2_date', ascending=True).reset_index(drop=True)
@@ -151,11 +151,6 @@ def prediction_pipeline(
     
     results = evaluate_classifier(best_model, X_train, y_train, X_eval, y_eval)
 
-    print(p_values)
-
-    # plot_roc_curve(y, model.predict_proba(X)[:, 1])
-    # plot_pr_curve(y, model.predict_proba(X)[:, 1])
-
     return labeled_data, best_model, results
 
 if __name__ == "__main__":
@@ -165,8 +160,6 @@ if __name__ == "__main__":
     for name in os.listdir(directory):
         if os.path.isfile(os.path.join(directory, name)):
             tickers.append(name.split('.')[0])
-
-    # tickers = tickers[:10]  # limit to first 10 tickers for testing
     
     labeled_data, best_model, results = prediction_pipeline(tickers)
 

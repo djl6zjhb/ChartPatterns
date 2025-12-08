@@ -27,6 +27,7 @@ def ma_crossover_signals(df, short_window=20, long_window=50, horizons=(5, 20, 6
     data['ma_long'] = data['Close'].rolling(long_window).mean()
 
     # short MA crossing from above to below long MA, indicating a downward turn in the market
+    
     # begin ChatGPT section
     prev = data.shift(1)
     cond_prev = prev['ma_short'] > prev['ma_long']

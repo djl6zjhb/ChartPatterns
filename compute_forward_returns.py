@@ -30,7 +30,7 @@ def compute_forward_returns(df, events_df, predicted = False, horizons=(5, 20, 6
             else:
                 t0 = row['confirm_date']
 
-            # index at the given horizonif t0 + h is within df index range; edge case to avoid erroring out
+            # index at the given horizon if t0 + h is within df index range; edge case to avoid erroring out
             t_fwd = df.index[df.index.get_loc(t0) + h] if (df.index.get_loc(t0) + h) < len(df.index) else None
             if t_fwd is None:
                 vals.append(np.nan)

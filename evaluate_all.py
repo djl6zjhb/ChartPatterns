@@ -21,10 +21,6 @@ def evaluate_all(events_dt, events_rand, events_ma, horizons=(5, 20, 60)):
     """
     individual_records = []
 
-    # print(events_dt)
-    # print(events_rand)
-    # print(events_ma)
-
     # comparing returns for each horizon individually
     for h in horizons:
         col = f'ret_{h}d'

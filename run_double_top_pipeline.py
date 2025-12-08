@@ -10,7 +10,6 @@ from sample_random_events import sample_random_events
 from ma_crossover_signals import ma_crossover_signals
 from evaluate_all import evaluate_all
 from plot_return_distributions import plot_return_distributions
-from plot_parameter_heatmap import plot_parameter_heatmap
 from label_events import label_events
 
 def run_double_top_pipeline(
@@ -117,13 +116,12 @@ def run_double_top_pipeline(
         dt_events.to_csv(f"{save_prefix}_events.csv", index=False)
         ind_return_summary_df.to_csv(f"{save_prefix}_summary.csv", index=False)
         comp_return_summary_df.to_csv(f"{save_prefix}_comparison_summary.csv", index=False)
-        # print(f"Saved events to {save_prefix}_events.csv and summary to {save_prefix}_summary.csv")
+        print(f"Saved events to {save_prefix}_events.csv and summary to {save_prefix}_summary.csv")
 
     # 7) plots
     if make_plots:
         mid_h = horizons[len(horizons) // 2]
         plot_return_distributions(dt_events, rand_events, ma_events, ticker=ticker, horizon=mid_h)
-        # plot_parameter_heatmap(dt_events, ticker=ticker, horizon=mid_h)
     
     # 8) compile full summary of events across all tickers
     ind_full_summary = pd.concat([ind_full_summary, ind_return_summary_df], ignore_index=True)
@@ -154,9 +152,7 @@ if __name__ == "__main__":
 
             # use when making images or saving example files
             # dt_events, dt_candidates, rand_events, ma_events, summary_df, full_summary = run_double_top_pipeline(symbol, save_prefix=f'{symbol}', make_plots=True)
-            # break  # only process the first file in this directory
-        # break  # stop after the top-level directory iteration
-    
+
     dt_candidates = label_events(dt_candidates, dt_events)
 
     ind_return_summary_df.to_csv('ind_returns_all_horizons.csv', index=True)

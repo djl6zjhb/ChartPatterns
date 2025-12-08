@@ -9,7 +9,7 @@ from sklearn.metrics import (
     recall_score,
     f1_score,
     roc_auc_score,
-    average_precision_score,  # PR-AUC
+    average_precision_score,
     brier_score_loss,
 )
 

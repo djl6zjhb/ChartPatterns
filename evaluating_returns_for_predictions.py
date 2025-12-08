@@ -43,8 +43,6 @@ def evaluating_returns_for_predictions(data_file:str, model_name:str, feature_na
     preds = (probs >= 0.5).astype(int)
 
     test_data['predicted_label'] = preds
-    # print(test_data[['Ticker', 'peak2_date', 'label', 'predicted_label']])
-    # print(test_data.where(test_data['predicted_label'] == 1).dropna())
 
     predicted_events = test_data.where(test_data['predicted_label'] == 1).dropna()
 
