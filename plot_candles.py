@@ -7,12 +7,12 @@ from pos_to_date import pos_to_date
 def plot_candles(
     df,
     dt_events,
-    title="Double Top Candlestick Chart",
     volume=True,
     mav=None,
     date_range=None,
     fig_size=(8, 4),
     save_path=None,
+    addplot_size = [200,200,180,240]
 ):
     """
     Plot a candlestick chart and overlay Double Top peaks, troughs, and confirmations.
@@ -117,7 +117,7 @@ def plot_candles(
                 peak1_series,
                 type="scatter",
                 marker="^",
-                markersize=200,
+                markersize=addplot_size[0],
                 color="lime",
                 edgecolors="black",
                 linewidths=1.5,
@@ -131,7 +131,7 @@ def plot_candles(
                 peak2_series,
                 type="scatter",
                 marker="^",
-                markersize=200,
+                markersize=addplot_size[1],
                 color="green",
                 edgecolors="black",
                 linewidths=1.5,
@@ -145,7 +145,7 @@ def plot_candles(
                 trough_series,
                 type="scatter",
                 marker="o",
-                markersize=180,
+                markersize=addplot_size[2],
                 color="orange",
                 edgecolors="black",
                 linewidths=1.5,
@@ -159,7 +159,7 @@ def plot_candles(
                 confirm_series,
                 type="scatter",
                 marker="v",
-                markersize=240,
+                markersize=addplot_size[3],
                 color="red",
                 edgecolors="black",
                 linewidths=1.5,
@@ -171,7 +171,6 @@ def plot_candles(
         df_plot,
         type="candle",
         style="yahoo",
-        title=title,
         volume=volume,
         mav=mav if mav is not None else (),
         addplot=apds,
@@ -196,23 +195,7 @@ if __name__ == "__main__":
                 skiprows=[1]
     )
 
-    full_summary = pd.DataFrame(columns=['5-day success','5-day return','5-day p-value','5-day hit ratio','5-day sharpe','5-day cohen d',
-                                         '20-day success','20-day return','20-day p-value','20-day hit ratio','20-day sharpe','20-day cohen d',
-                                         '60-day success','60-day return','60-day p-value','60-day hit ratio','60-day sharpe','60-day cohen d'])
-
-    df_solv = pd.read_csv("./sp500/sp500/SOLV.csv", 
-                 parse_dates=["Date"], 
-                 index_col="Date",
-                 dtype={
-                    "Open": float,
-                    "High": float,
-                    "Low": float,
-                    "Close": float,
-                    "Volume": float
-                },
-                header = 0,
-                skiprows=[1]
-    )
-    dt_events, rand_events, ma_events, summary_df, text_summary, full_summary = run_double_top_pipeline('AAPL',full_summary=full_summary)
-    # plot_candles(df_aapl, dt_events, title="AAPL Candles", mav=(20,50), fig_size=(12, 6), save_path="aapl_chart.png")
-    plot_candles(df_aapl, dt_events, title="AAPL Candles", mav=None, date_range=('2020-Dec-16', '2021-Jun-16'), save_path="aapl_chart_zoomed.png")
+    ind_return_summary_df, comp_return_summary_df = pd.DataFrame(), pd.DataFrame()
+    dt_events, rand_events, ma_events, summary_df, text_summary, full_summary = run_double_top_pipeline('AAPL',ind_full_summary=ind_return_summary_df, comp_full_summary=comp_return_summary_df)
+    plot_candles(df_aapl, dt_events, mav=(20,50), fig_size=(12, 6), save_path="aapl_chart.png", addplot_size = [50,50,45,60])
+    plot_candles(df_aapl, dt_events, mav=None, date_range=('2020-Dec-16', '2021-Jun-16'), save_path="aapl_chart_zoomed.png")
