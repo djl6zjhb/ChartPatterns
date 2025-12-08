@@ -199,3 +199,5 @@ if __name__ == "__main__":
     dt_events, rand_events, ma_events, summary_df, text_summary, full_summary = run_double_top_pipeline('AAPL',ind_full_summary=ind_return_summary_df, comp_full_summary=comp_return_summary_df)
     plot_candles(df_aapl, dt_events, mav=(20,50), fig_size=(12, 6), save_path="aapl_chart.png", addplot_size = [50,50,45,60])
     plot_candles(df_aapl, dt_events, mav=None, date_range=('2020-Dec-16', '2021-Jun-16'), save_path="aapl_chart_zoomed.png")
+
+    plot_candles(df_aapl, dt_events, mav=(20,50), fig_size=(12, 6), date_range=('2020-Dec-16', '2024-Jun-16'), save_path="aapl_chart_zoomed_ma.png", addplot_size = [0,0,0,0])
